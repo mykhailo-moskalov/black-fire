@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: `https://black-fire-gamma.vercel.app/not-found`,
     images: [
       {
-        url: "https://black-fire-gamma.vercel.app/icon1.png",
+        url: "https://black-fire-gamma.vercel.app/og-logo.png",
         width: 1200,
         height: 630,
         alt: "Black Fire Cheer",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Non-existent page`,
     description: "This page does not exist",
-    images: ["https://black-fire-gamma.vercel.app/icon1.png"],
+    images: ["https://black-fire-gamma.vercel.app/og-logo.png"],
   },
 };
 
