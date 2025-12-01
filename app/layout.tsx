@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Black Fire Cheer",
     images: [
       {
-        url: "https://black-fire-gamma.vercel.app/og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Black Fire Cheer",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: `Black Fire`,
     description:
       "Cheerdance team bringing energy and passion to every performance.",
-    images: ["https://black-fire-gamma.vercel.app/og-image.jpg"],
+    images: ["/og-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
