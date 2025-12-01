@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     description:
       "Cheerdance team bringing energy and passion to every performance.",
     url: `https://black-fire-gamma.vercel.app`,
+    siteName: "Black Fire Cheer",
     images: [
       {
         url: "./og-image.jpg",
