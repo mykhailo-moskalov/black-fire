@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Black Fire Cheer",
     images: [
       {
-        url: "/app/icon1.png",
+        url: "/icon1.png",
         width: 96,
         height: 96,
         alt: "Black Fire Cheer",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: `Black Fire`,
     description:
       "Cheerdance team bringing energy and passion to every performance.",
-    images: ["/app/icon1.png"],
+    images: ["/icon1.png"],
   },
   icons: {
     icon: "/favicon.ico",
