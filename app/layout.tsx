@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     title: "Black Fire",
     description:
       "Cheerdance team bringing energy and passion to every performance.",
-    url: `https://blackfirecheer.at/`,
+    url: `https://black-fire-gamma.vercel.app`,
     siteName: "Black Fire Cheer",
     images: [
       {
-        url: "/icon1.png",
-        width: 96,
-        height: 96,
+        url: "https://black-fire-gamma.vercel.app/icon1.png",
+        width: 1200,
+        height: 630,
         alt: "Black Fire Cheer",
       },
     ],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: `Black Fire`,
     description:
       "Cheerdance team bringing energy and passion to every performance.",
-    images: ["/icon1.png"],
+    images: ["https://black-fire-gamma.vercel.app/icon1.png"],
   },
   icons: {
     icon: "/favicon.ico",

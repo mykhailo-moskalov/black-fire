@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Non-existent page",
     description: "This page does not exist",
-    url: `https://blackfirecheer.at/not-found`,
+    url: `https://black-fire-gamma.vercel.app/not-found`,
     images: [
       {
-        url: "/app/icon1.png",
-        width: 96,
-        height: 96,
+        url: "https://black-fire-gamma.vercel.app/icon1.png",
+        width: 1200,
+        height: 630,
         alt: "Black Fire Cheer",
       },
     ],
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Non-existent page`,
     description: "This page does not exist",
-    images: ["/app/icon1.png"],
+    images: ["https://black-fire-gamma.vercel.app/icon1.png"],
   },
 };
 
