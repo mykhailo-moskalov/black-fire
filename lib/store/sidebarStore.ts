@@ -15,6 +15,7 @@ export const useSidebarStore = create<SidebarStore>()(
     {
       name: "sidebar-storage",
       partialize: (state) => ({ isOpen: state.isOpen }),
+      skipHydration: true,
     },
   ),
 );
