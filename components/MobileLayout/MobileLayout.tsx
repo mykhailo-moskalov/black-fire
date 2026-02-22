@@ -1,7 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
-import { useGesture } from "@use-gesture/react";
+import { ReactNode, useEffect } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Sidebar from "@/components/Sidebar/Sidebar";
@@ -14,19 +13,28 @@ export default function MobileLayout({ children }: { children: ReactNode }) {
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
   const isMobile = useWidthStore((state) => state.isMobile);
 
-  useGesture(
-    {
-      onDrag: ({ down, movement: [mx] }) => {
-        if (!isMobile) return;
+  useEffect(() => {
+    let startX = 0;
 
-        if (!down && mx < -100) setIsOpen(true); // swipe left to open
-        if (!down && mx > 100) setIsOpen(false); // swipe right to close
-      },
-    },
-    {
-      target: typeof window !== "undefined" ? window : undefined,
-    },
-  );
+    const handleTouchStart = (e: TouchEvent) => {
+      startX = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (!isMobile) return;
+      const diff = startX - e.changedTouches[0].clientX;
+      if (diff > 100) setIsOpen(true); // swipe left
+      if (diff < -100) setIsOpen(false); // swipe right
+    };
+
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [isMobile, setIsOpen]);
 
   return (
     <>
