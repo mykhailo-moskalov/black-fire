@@ -4,14 +4,14 @@ import css from "./Sidebar.module.css";
 
 import Navigation from "../Navigation/Navigation";
 
-import { forwardRef, useEffect } from "react";
+import { useEffect } from "react";
 import { useWidthStore } from "@/lib/store/widthStore";
 import { useSidebarStore } from "@/lib/store/sidebarStore";
 import { IoClose, IoGlobe } from "react-icons/io5";
 import toast from "react-hot-toast";
 import Container from "../Container/Container";
 
-const Sidebar = forwardRef<HTMLDivElement, object>((_, ref) => {
+export default function Sidebar() {
   const isMobile = useWidthStore((state) => state.isMobile);
   const isOpen = useSidebarStore((state) => state.isOpen);
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
@@ -45,11 +45,7 @@ const Sidebar = forwardRef<HTMLDivElement, object>((_, ref) => {
       aria-modal="true"
       onClick={handleBackdropClick}
     >
-      <div
-        ref={ref}
-        className={css.sidebar}
-        style={{ transform: isOpen ? "translateX(0)" : "translateX(100%)" }}
-      >
+      <div className={`${css.sidebar} ${isOpen ? css.open : css.closed}`}>
         <Container className={css.sidebarContainer}>
           <button className={css.btnClose} onClick={() => setIsOpen(false)}>
             <IoClose />
@@ -67,8 +63,4 @@ const Sidebar = forwardRef<HTMLDivElement, object>((_, ref) => {
       </div>
     </div>
   );
-});
-
-Sidebar.displayName = "Sidebar";
-
-export default Sidebar;
+}

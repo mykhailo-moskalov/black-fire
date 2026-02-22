@@ -31,6 +31,12 @@
   @media only screen and (min-width: 1440px) {
   }
 }
+.closed {
+  transform: translateX(100%);
+}
+.open {
+  transform: translateX(0);
+}
 
 .sidebarContainer {
   min-width: 0;
