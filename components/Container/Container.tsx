@@ -3,8 +3,9 @@ import css from "./Container.module.css";
 
 interface ContainerProps {
   children: ReactNode;
+  className?: string;
 }
 
-export default function Container({ children }: ContainerProps) {
-  return <div className={css.container}>{children}</div>;
+export default function Container({ children, className }: ContainerProps) {
+  return <div className={`${css.container} ${className}`}>{children}</div>;
 }

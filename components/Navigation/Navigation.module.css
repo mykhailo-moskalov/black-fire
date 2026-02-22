@@ -1,0 +1,87 @@
+.nav {
+  margin-top: 280px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  color: #fff;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  @media only screen and (min-width: 1440px) {
+  }
+}
+
+.navigationLink {
+  display: inline-block;
+  text-align: center;
+
+  width: 100%;
+}
+
+.accordionTrigger {
+  display: flex;
+  justify-content: center;
+
+  transform: none !important;
+}
+
+.accordionContent {
+  overflow: hidden;
+  will-change: height;
+}
+
+.accordionContent[data-state="open"] {
+  animation: slideDown 0.3s ease-in-out;
+}
+
+.accordionContent[data-state="closed"] {
+  animation: slideUp 0.3s ease-in-out;
+}
+
+.subNavigation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  padding-left: 12px;
+}
+
+.chevronBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 150px;
+
+  width: 30px;
+  height: 32px;
+}
+.accordionTrigger[data-state="open"] .chevronBtn {
+  transform: rotate(180deg);
+}
+.accordionTrigger[data-state="closed"] .chevronBtn {
+  transform: rotate(0deg);
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}

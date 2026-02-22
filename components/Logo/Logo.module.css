@@ -3,5 +3,7 @@
   align-items: center;
   justify-content: space-between;
 
+  transform: none !important;
+
   width: max-content;
 }

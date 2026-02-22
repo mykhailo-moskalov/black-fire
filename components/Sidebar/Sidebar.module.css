@@ -1,0 +1,82 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(33, 37, 41, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+.backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+
+  width: 65%;
+  height: 100%;
+  padding: 32px 0;
+
+  color: #fff;
+  background-color: #521a1abb;
+  box-shadow: 0 5px 15px rgba(75, 53, 53, 0.3);
+
+  @media only screen and (min-width: 768px) {
+  }
+
+  @media only screen and (min-width: 1440px) {
+  }
+}
+.closed {
+  transform: translateX(100%);
+}
+.open {
+  transform: translateX(0);
+}
+
+.sidebarContainer {
+  min-width: 0;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar button {
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.15);
+  }
+}
+
+.btnClose {
+  align-self: flex-start;
+  width: 40px;
+  height: 40px;
+
+  @media only screen and (min-width: 768px) {
+  }
+
+  @media only screen and (min-width: 1440px) {
+  }
+}
+
+.btnLang {
+  width: 32px;
+  height: 32px;
+
+  margin-top: auto;
+
+  @media only screen and (min-width: 768px) {
+  }
+
+  @media only screen and (min-width: 1440px) {
+  }
+}

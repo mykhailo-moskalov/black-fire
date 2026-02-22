@@ -1,69 +1,29 @@
-import Link from "next/link";
+"use client";
+
+import { IoMenu } from "react-icons/io5";
 import Logo from "../Logo/Logo";
-import css from "./Header.module.css";
 import Container from "../Container/Container";
+import Navigation from "../Navigation/Navigation";
+import css from "./Header.module.css";
+import { useSidebarStore } from "@/lib/store/sidebarStore";
+import { useWidthStore } from "@/lib/store/widthStore";
 
 const Header = () => {
+  const setIsOpen = useSidebarStore((state) => state.setIsOpen);
+  const isMobile = useWidthStore((state) => state.isMobile);
+
   return (
     <header id="header" className={css.header}>
-      <Container>
+      <Container className={css.headerContainer}>
         <Logo width={60} height={95} />
-        <nav aria-label="Main Navigation">
-          <ul className={css.navigation}>
-            <li className={css.navigationItem}>
-              <Link className={css.navigationLink} href="#hero">
-                Home
-              </Link>
-            </li>
-            <li className={css.navigationItem}>
-              <Link className={css.navigationLink} href="#about">
-                About Us
-              </Link>
-            </li>
-            <li className={css.navigationItem}>
-              <Link className={css.navigationLink} href="#teams">
-                Our Teams
-              </Link>
-            </li>
-          </ul>
-        </nav>
 
-        <button
-          className="header__burger btn btn--icon"
-          type="button"
-          data-mobile-menu-open
-        ></button>
-
-        <div
-          className="mobile-menu"
-          id="mobile-menu"
-          data-mobile-menu
-          aria-hidden="true"
-        >
-          <button
-            className="mobile-menu-close btn btn--icon"
-            type="button"
-            data-mobile-menu-close
-          ></button>
-
-          <ul className={css.navigation}>
-            <li className={css.navigationItem}>
-              <Link className={css.navigationLink} href="#hero">
-                Home
-              </Link>
-            </li>
-            <li className={css.navigationItem}>
-              <Link className={css.navigationLink} href="#about">
-                About Us
-              </Link>
-            </li>
-            <li className={css.navigationItem}>
-              <Link className={css.navigationLink} href="#teams">
-                Our Teams
-              </Link>
-            </li>
-          </ul>
-        </div>
+        {isMobile ? (
+          <button className={css.burger} onClick={() => setIsOpen(true)}>
+            <IoMenu />
+          </button>
+        ) : (
+          <Navigation />
+        )}
       </Container>
     </header>
   );

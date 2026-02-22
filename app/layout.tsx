@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+
 import "./globals.css";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+
+import MobileLayout from "@/components/MobileLayout/MobileLayout";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -67,18 +68,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  // modal,
 }: Readonly<{
   children: React.ReactNode;
-  // modal: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body className={roboto.variable}>
-        <Header />
-        {children}
-        {/* {modal} */}
-        <Footer />
+        <MobileLayout>{children}</MobileLayout>
       </body>
     </html>
   );
