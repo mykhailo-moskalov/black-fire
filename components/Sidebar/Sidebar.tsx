@@ -45,7 +45,11 @@ const Sidebar = forwardRef<HTMLDivElement, object>((_, ref) => {
       aria-modal="true"
       onClick={handleBackdropClick}
     >
-      <div className={`${css.sidebar} ${isOpen ? css.open : css.closed}`}>
+      <div
+        ref={ref}
+        className={css.sidebar}
+        style={{ transform: isOpen ? "translateX(0)" : "translateX(100%)" }}
+      >
         <Container className={css.sidebarContainer}>
           <button className={css.btnClose} onClick={() => setIsOpen(false)}>
             <IoClose />
