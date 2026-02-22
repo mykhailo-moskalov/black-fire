@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import { useGesture } from "@use-gesture/react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
@@ -9,11 +9,11 @@ import { useWidthStore } from "@/lib/store/widthStore";
 import { useSidebarStore } from "@/lib/store/sidebarStore";
 import ScreenWidthWatcher from "../ScreenWidthWatcher/ScreenWidthWatcher";
 import { Toaster } from "react-hot-toast";
-import StoreHydration from "../StoreHydration/StoreHydration";
 
 export default function MobileLayout({ children }: { children: ReactNode }) {
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
   const isMobile = useWidthStore((state) => state.isMobile);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useGesture(
     {
@@ -25,14 +25,13 @@ export default function MobileLayout({ children }: { children: ReactNode }) {
       },
     },
     {
-      target: window,
+      target: containerRef,
     },
   );
 
   return (
     <>
-      <div>
-        <StoreHydration />
+      <div ref={containerRef}>
         <ScreenWidthWatcher />
         <Header />
         <Sidebar />
