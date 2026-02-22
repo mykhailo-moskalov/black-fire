@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Sidebar from "@/components/Sidebar/Sidebar";
@@ -13,25 +13,53 @@ export default function MobileLayout({ children }: { children: ReactNode }) {
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
   const isMobile = useWidthStore((state) => state.isMobile);
 
+  const sidebarRef = useRef<HTMLDivElement>(null); // pass this to your Sidebar
+
   useEffect(() => {
     let startX = 0;
+    let currentX = 0;
+    const THRESHOLD = 100;
 
     const handleTouchStart = (e: TouchEvent) => {
       startX = e.touches[0].clientX;
     };
 
-    const handleTouchEnd = (e: TouchEvent) => {
+    const handleTouchMove = (e: TouchEvent) => {
       if (!isMobile) return;
-      const diff = startX - e.changedTouches[0].clientX;
-      if (diff > 100) setIsOpen(true); // swipe left
-      if (diff < -100) setIsOpen(false); // swipe right
+      currentX = e.touches[0].clientX;
+      const diff = currentX - startX;
+
+      if (sidebarRef.current) {
+        // sidebar opens from right, so clamp between 0 and sidebar width
+        const offset = Math.max(-300, Math.min(0, diff));
+        sidebarRef.current.style.transform = `translateX(${offset}px)`;
+        sidebarRef.current.style.transition = "none"; // disable transition while dragging
+      }
+    };
+
+    const handleTouchEnd = () => {
+      if (!isMobile) return;
+      const diff = currentX - startX;
+
+      if (sidebarRef.current) {
+        sidebarRef.current.style.transition = "transform 0.3s ease"; // re-enable transition on release
+        if (diff < -THRESHOLD) {
+          setIsOpen(true);
+          sidebarRef.current.style.transform = "translateX(0)";
+        } else {
+          setIsOpen(false);
+          sidebarRef.current.style.transform = "translateX(100%)";
+        }
+      }
     };
 
     window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
     window.addEventListener("touchend", handleTouchEnd);
 
     return () => {
       window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", handleTouchEnd);
     };
   }, [isMobile, setIsOpen]);
@@ -41,7 +69,7 @@ export default function MobileLayout({ children }: { children: ReactNode }) {
       <div>
         <ScreenWidthWatcher />
         <Header />
-        <Sidebar />
+        <Sidebar ref={sidebarRef} />
         {children}
         <Footer />
       </div>

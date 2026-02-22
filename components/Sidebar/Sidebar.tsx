@@ -4,14 +4,14 @@ import css from "./Sidebar.module.css";
 
 import Navigation from "../Navigation/Navigation";
 
-import { useEffect } from "react";
+import { forwardRef, useEffect } from "react";
 import { useWidthStore } from "@/lib/store/widthStore";
 import { useSidebarStore } from "@/lib/store/sidebarStore";
 import { IoClose, IoGlobe } from "react-icons/io5";
 import toast from "react-hot-toast";
 import Container from "../Container/Container";
 
-export default function Sidebar() {
+const Sidebar = forwardRef<HTMLDivElement, object>((_, ref) => {
   const isMobile = useWidthStore((state) => state.isMobile);
   const isOpen = useSidebarStore((state) => state.isOpen);
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
@@ -63,4 +63,8 @@ export default function Sidebar() {
       </div>
     </div>
   );
-}
+});
+
+Sidebar.displayName = "Sidebar";
+
+export default Sidebar;
