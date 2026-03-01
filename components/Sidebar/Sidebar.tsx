@@ -50,7 +50,10 @@ export default function Sidebar() {
           <button className={css.btnClose} onClick={() => setIsOpen(false)}>
             <IoClose />
           </button>
-          <Navigation />
+          <Navigation
+            className={css.nav}
+            onLinkClick={() => setIsOpen(false)}
+          />
           <button
             className={css.btnLang}
             onClick={() =>

@@ -1,0 +1,39 @@
+.footer {
+  padding: 24px 0 64px;
+
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.container {
+  display: flex;
+}
+
+.nav {
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+}
+
+.socialsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 12px;
+  justify-content: center;
+}
+
+.socialsItem {
+  padding: 4px;
+  border-radius: 8px;
+
+  background-color: #521a1abb;
+  box-shadow: var(--box-shadow);
+}

@@ -23,8 +23,8 @@ export default function MobileLayout({ children }: { children: ReactNode }) {
     const handleTouchEnd = (e: TouchEvent) => {
       if (!isMobile) return;
       const diff = startX - e.changedTouches[0].clientX;
-      if (diff > 100) setIsOpen(true); // swipe left
-      if (diff < -100) setIsOpen(false); // swipe right
+      if (diff > 100) setIsOpen(true);
+      if (diff < -100) setIsOpen(false);
     };
 
     window.addEventListener("touchstart", handleTouchStart);

@@ -15,14 +15,14 @@ const Header = () => {
   return (
     <header id="header" className={css.header}>
       <Container className={css.headerContainer}>
-        <Logo width={60} height={95} />
+        <Logo width={(60 / 3) * 2} height={(95 / 3) * 2} />
 
         {isMobile ? (
           <button className={css.burger} onClick={() => setIsOpen(true)}>
             <IoMenu />
           </button>
         ) : (
-          <Navigation />
+          <Navigation className={css.nav} />
         )}
       </Container>
     </header>

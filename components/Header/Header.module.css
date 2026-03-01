@@ -6,7 +6,7 @@
   padding: 16px 0;
   background-color: #521a1abb;
   z-index: 999;
-  box-shadow: 0 5px 15px rgba(82, 26, 26, 0.4);
+  box-shadow: var(--box-shadow);
 
   /* @media only screen and (min-width: 768px) {
     max-width: 768px;

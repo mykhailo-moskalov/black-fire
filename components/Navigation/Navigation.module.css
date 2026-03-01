@@ -1,13 +1,7 @@
-.nav {
-  margin-top: 280px;
-}
-
 .navigation {
   display: flex;
   flex-direction: column;
   gap: 36px;
-
-  color: #fff;
 
   @media only screen and (min-width: 768px) {
     flex-direction: row;
@@ -19,14 +13,14 @@
 
 .navigationLink {
   display: inline-block;
-  text-align: center;
 
   width: 100%;
 }
 
 .accordionTrigger {
-  display: flex;
-  justify-content: center;
+  text-align: left;
+
+  color: inherit;
 
   transform: none !important;
 }
