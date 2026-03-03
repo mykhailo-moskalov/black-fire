@@ -1,0 +1,47 @@
+.hero {
+  padding-top: calc(40px + var(--header-height)) !important;
+  /* max-width: 375px;
+  margin: 0 auto; */
+
+  box-shadow: var(--box-shadow);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(43, 43, 43, 0.35) 0%,
+      rgba(43, 43, 43, 0.85) 100%
+    ),
+    url("/hero.png") no-repeat center/cover;
+
+  @media screen and (min-resolution: 2x) {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(43, 43, 43, 0.35) 0%,
+        rgba(43, 43, 43, 0.85) 100%
+      ),
+      url("/hero.png") no-repeat center/cover;
+  }
+}
+
+.heading {
+  text-transform: uppercase;
+
+  margin-bottom: 32px;
+}
+
+.subHeading {
+  text-transform: uppercase;
+  text-align: right;
+
+  margin-bottom: 32px;
+}
+
+.link {
+  display: inline-block;
+  padding: 12px;
+
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+}

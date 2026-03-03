@@ -22,8 +22,7 @@
   padding: 32px 0;
   border-radius: 16px;
 
-  color: #fff;
-  background-color: #521a1abb;
+  background-color: var(--primary-color-op);
   box-shadow: var(--box-shadow);
 
   @media only screen and (min-width: 768px) {
@@ -49,7 +48,7 @@
 }
 
 .sidebar button {
-  color: #fff;
+  color: var(--background);
 
   &:hover,
   &:focus {

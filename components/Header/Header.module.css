@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   padding: 16px 0;
-  background-color: #521a1abb;
+  background-color: var(--primary-color-op);
   z-index: 999;
   box-shadow: var(--box-shadow);
 
@@ -36,5 +36,5 @@
 }
 
 .burger svg {
-  color: #fff;
+  color: var(--background);
 }

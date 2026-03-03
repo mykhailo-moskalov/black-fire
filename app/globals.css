@@ -5,7 +5,10 @@
 :root {
   --background: #fff;
   --foreground: #001;
+  --primary-color: #521a1a;
+  --primary-color-op: #521a1abb;
   --box-shadow: 0 5px 15px rgba(75, 53, 53, 0.3);
+  --header-height: 92px;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -27,7 +30,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--background);
   background: var(--background);
   min-width: 320px;
 }

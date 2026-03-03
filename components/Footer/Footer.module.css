@@ -1,12 +1,20 @@
 .footer {
-  padding: 24px 0 64px;
+  padding: 24px 0;
 
   background-color: var(--foreground);
-  color: var(--background);
 }
 
 .container {
+  padding: 0;
+}
+
+.columnsList {
   display: flex;
+  gap: 16px;
+}
+
+.columnsItem:nth-child(1) {
+  flex-shrink: 0;
 }
 
 .nav {
@@ -33,7 +41,27 @@
 .socialsItem {
   padding: 4px;
   border-radius: 8px;
+  width: max-content;
 
-  background-color: #521a1abb;
+  background-color: var(--primary-color-op);
   box-shadow: var(--box-shadow);
+}
+
+.socialsLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.copyright {
+  margin-top: 16px;
+
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.6;
 }
