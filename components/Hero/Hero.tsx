@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Container from "../Container/Container";
-("web-app-manifest-192x192.png");
 import css from "./Hero.module.css";
 import Section from "../Section/Section";
 
@@ -12,8 +11,8 @@ const Hero = () => {
         <h3 className={css.subHeading}>
           kein Weg ist unmöglich mit einer Familie
         </h3>
-        <Link href="#history" className={css.link}>
-          Unsere Geschichte
+        <Link href="#plan" className={css.link}>
+          Unser Trainingsplan
         </Link>
       </Container>
     </Section>

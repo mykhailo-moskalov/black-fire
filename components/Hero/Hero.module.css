@@ -1,8 +1,7 @@
 .hero {
   padding-top: calc(40px + var(--header-height)) !important;
-  /* max-width: 375px;
-  margin: 0 auto; */
 
+  color: var(--background);
   box-shadow: var(--box-shadow);
 
   background:
