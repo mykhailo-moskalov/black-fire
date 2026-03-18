@@ -17,8 +17,8 @@ const Sponsors = () => {
               className={css.sponsorsLink}
             >
               <Image
-                width={140}
-                height={70}
+                width={120}
+                height={60}
                 alt="GCClean Logo"
                 src="/sponsors/LOGO-GCClean.png"
                 className={css.gclean}
@@ -32,7 +32,7 @@ const Sponsors = () => {
               className={css.sponsorsLink}
             >
               <Image
-                width={200}
+                width={190}
                 height={80}
                 alt="Renauld Zidek Logo"
                 src="/sponsors/LOGO-RZS.webp"
