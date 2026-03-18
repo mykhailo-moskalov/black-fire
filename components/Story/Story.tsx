@@ -23,7 +23,7 @@ const Story = () => {
           Energie, die Black Fire Cheer and Dance ausmacht.
         </p>
         <p className={css.storyText}>
-          Willst du auch Teil unseres Teams werden? Dann melde dich bei uns –
+          Willst du auch Teil unseres Teams werden? Dann melde dich bei uns -
           wir freuen uns auf dich!
         </p>
       </Container>

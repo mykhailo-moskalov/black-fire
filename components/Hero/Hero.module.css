@@ -1,5 +1,6 @@
 .hero {
   padding-top: calc(40px + var(--header-height)) !important;
+  height: 640px;
 
   color: var(--background);
   box-shadow: var(--box-shadow);
@@ -10,7 +11,7 @@
       rgba(43, 43, 43, 0.35) 0%,
       rgba(43, 43, 43, 0.85) 100%
     ),
-    url("/hero.png") no-repeat center/cover;
+    url("/hero/hero-min.webp") no-repeat center/cover;
 
   @media screen and (min-resolution: 2x) {
     background:
@@ -19,7 +20,7 @@
         rgba(43, 43, 43, 0.35) 0%,
         rgba(43, 43, 43, 0.85) 100%
       ),
-      url("/hero.png") no-repeat center/cover;
+      url("/hero/hero-min.webp") no-repeat center/cover; /* ! */
   }
 }
 

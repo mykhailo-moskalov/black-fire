@@ -20,7 +20,7 @@ const Sponsors = () => {
                 width={140}
                 height={70}
                 alt="GCClean Logo"
-                src="/LOGO-GCClean.png"
+                src="/sponsors/LOGO-GCClean.png"
                 className={css.gclean}
               />
             </Link>
@@ -35,7 +35,7 @@ const Sponsors = () => {
                 width={200}
                 height={80}
                 alt="Renauld Zidek Logo"
-                src="/"
+                src="/sponsors/"
                 className={css.gclean}
               />
             </Link>

@@ -1,0 +1,8 @@
+.storyText {
+  text-align: center;
+  padding: 0 32px;
+
+  &:not(:last-child) {
+    margin-bottom: 1lh;
+  }
+}

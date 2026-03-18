@@ -57,7 +57,13 @@ export default function Sidebar() {
           <button
             className={css.btnLang}
             onClick={() =>
-              toast.success("Language has been successfully changed!")
+              toast.loading(
+                "Language-changing feature is under construction!",
+                {
+                  duration: 4000,
+                  className: `${css.toastIcon}`,
+                },
+              )
             }
           >
             <IoGlobe />
