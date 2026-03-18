@@ -35,7 +35,7 @@ const Sponsors = () => {
                 width={200}
                 height={80}
                 alt="Renauld Zidek Logo"
-                src="/sponsors/"
+                src="/sponsors/LOGO-RZS.webp"
                 className={css.gclean}
               />
             </Link>

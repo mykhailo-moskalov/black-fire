@@ -24,22 +24,27 @@
   }
 }
 
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .heading {
   text-transform: uppercase;
 
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .subHeading {
   text-transform: uppercase;
   text-align: right;
-
-  margin-bottom: 32px;
 }
 
 .link {
-  display: inline-block;
+  width: fit-content;
   padding: 12px;
+  margin-top: auto;
 
   border-radius: 8px;
   background-color: var(--primary-color);
