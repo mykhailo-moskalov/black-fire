@@ -58,7 +58,7 @@ export default function Sidebar() {
             className={css.btnLang}
             onClick={() =>
               toast.loading(
-                "Language-changing feature is under construction!",
+                "Die Funktion zum Wechseln der Sprache befindet sich derzeit im Aufbau!",
                 {
                   duration: 4000,
                   className: `${css.toastIcon}`,

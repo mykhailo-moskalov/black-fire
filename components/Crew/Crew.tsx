@@ -1,15 +1,15 @@
 import Container from "../Container/Container";
 import Section from "../Section/Section";
-import css from "./Plan.module.css";
+import css from "./Crew.module.css";
 
-const Plan = () => {
+const Crew = () => {
   return (
-    <Section className={css.plan}>
+    <Section className={css.crew}>
       <Container className={css.container}>
-        <h2 className={css.heading}>Unser Trainingsplan</h2>
+        <h2 className={css.heading}>Unsere Leitung</h2>
       </Container>
     </Section>
   );
 };
 
-export default Plan;
+export default Crew;
