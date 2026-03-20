@@ -1,9 +1,10 @@
 .hero {
-  padding-top: calc(40px + var(--header-height)) !important;
+  padding: calc(40px + var(--header-height)) 0
+    calc(28px + var(--bottom-div-height)) !important;
   height: 640px;
 
   color: var(--background);
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
 
   background:
     linear-gradient(
@@ -12,6 +13,8 @@
       rgba(43, 43, 43, 0.85) 100%
     ),
     url("/hero/hero-min.webp") no-repeat center/cover;
+
+  position: relative;
 
   @media screen and (min-resolution: 2x) {
     background:
@@ -49,4 +52,16 @@
   border-radius: 8px;
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
+}
+
+.bottomDiv {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmZmZmZmYiPjxwYXRoIGQ9Ik0zMjAgMjhDMTYwIDI4IDgwIDQ5IDAgNzBWMGgxMjgwdjcwYy04MCAyMS0xNjAgNDItMzIwIDQyLTMyMCAwLTMyMC04NC02NDAtODR6Ii8+PC9nPjwvc3ZnPg");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 7vw;
+  z-index: 500;
+  transform: scale(1, -1);
+  position: absolute;
+  left: 0;
+  bottom: -1;
 }

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Sponsors = () => {
   return (
-    <Section className={css.sponsors}>
+    <Section id="sponsors" className={css.sponsors}>
       <Container className={css.container}>
         <h2 className={css.heading}>Unsere Sponsoren</h2>
         <ul className={css.sponsorsList}>

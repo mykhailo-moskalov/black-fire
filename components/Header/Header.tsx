@@ -7,12 +7,13 @@ import Navigation from "../Navigation/Navigation";
 import css from "./Header.module.css";
 import { useSidebarStore } from "@/lib/store/sidebarStore";
 import { useWidthStore } from "@/lib/store/widthStore";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Header = () => {
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
   const isMobile = useWidthStore((state) => state.isMobile);
   const headerRef = useRef<HTMLElement>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const updateHeight = () => {
@@ -24,13 +25,28 @@ const Header = () => {
       }
     };
 
+    const handleScroll = () => {
+      console.log("scrollY", window.scrollY);
+      setScrolled(window.scrollY >= 300);
+    };
+
     updateHeight();
+
     window.addEventListener("resize", updateHeight);
-    return () => window.removeEventListener("resize", updateHeight);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
-    <header id="header" className={css.header} ref={headerRef}>
+    <header
+      id="header"
+      className={`${css.header} ${scrolled ? css.scrolled : ""}`}
+      ref={headerRef}
+    >
       <Container className={css.headerContainer}>
         <Logo width={40} height={(95 / 3) * 2} />
 

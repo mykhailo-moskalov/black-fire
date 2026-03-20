@@ -4,10 +4,13 @@ import css from "./Section.module.css";
 interface SectionProps {
   children: ReactNode;
   className?: string;
+  id?: string;
 }
 
-export default function Section({ children, className }: SectionProps) {
+export default function Section({ children, className, id }: SectionProps) {
   return (
-    <section className={`${css.section} ${className}`}>{children}</section>
+    <section id={id} className={`${css.section} ${className}`}>
+      {children}
+    </section>
   );
 }

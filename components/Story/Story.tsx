@@ -5,7 +5,7 @@ import css from "./Story.module.css";
 
 const Story = () => {
   return (
-    <Section className={css.story}>
+    <Section id="story" className={css.story}>
       <Container className={css.container}>
         <h2 className={css.heading}>Unsere Geschichte</h2>
         <p className={css.storyText}>

@@ -7,18 +7,14 @@ import * as Accordion from "@radix-ui/react-accordion";
 
 import { useWidthStore } from "@/lib/store/widthStore";
 import { IoChevronDown } from "react-icons/io5";
+import { smoothScrollTo } from "@/lib/utils/smoothScroll";
 
 interface NavigationProps {
   className?: string;
   chevronClassName?: string;
-  onLinkClick?: () => void;
 }
 
-const Navigation = ({
-  className,
-  chevronClassName,
-  onLinkClick,
-}: NavigationProps) => {
+const Navigation = ({ className, chevronClassName }: NavigationProps) => {
   const isMobile = useWidthStore((state) => state.isMobile);
 
   return (
@@ -27,7 +23,10 @@ const Navigation = ({
         {/* Startseite */}
         <li className={css.navigationItem}>
           <Link
-            onClick={onLinkClick}
+            onClick={(e) => {
+              e.preventDefault();
+              smoothScrollTo("hero");
+            }}
             className={css.navigationLink}
             href="#hero"
           >
@@ -41,9 +40,12 @@ const Navigation = ({
         {/* Über uns */}
         <li className={css.navigationItem}>
           <Link
-            onClick={onLinkClick}
+            onClick={(e) => {
+              e.preventDefault();
+              smoothScrollTo("story");
+            }}
             className={css.navigationLink}
-            href="#about"
+            href="#story"
           >
             {isMobile ? (
               <h4 className={css.navigationTitle}>Über uns</h4>
@@ -59,14 +61,14 @@ const Navigation = ({
               <Accordion.Trigger className={css.accordionTrigger}>
                 {isMobile ? (
                   <h4 className={css.navigationTitle}>
-                    Unsere Teams{" "}
+                    Unsere Teams
                     <IoChevronDown
                       className={`${css.chevronBtn} ${chevronClassName}`}
                     />
                   </h4>
                 ) : (
                   <h5 className={css.navigationTitle}>
-                    Unsere Teams{" "}
+                    Unsere Teams
                     <IoChevronDown
                       className={`${css.chevronBtn} ${chevronClassName}`}
                     />
@@ -79,8 +81,11 @@ const Navigation = ({
                   {/* Mini Flames */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#miniFlames"
-                      onClick={onLinkClick}
+                      href="#plan"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        smoothScrollTo("plan");
+                      }}
                       className={css.subLink}
                     >
                       <h6>Mini Flames</h6>
@@ -89,8 +94,11 @@ const Navigation = ({
                   {/* Fairies */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#fairies"
-                      onClick={onLinkClick}
+                      href="#plan"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        smoothScrollTo("plan");
+                      }}
                       className={css.subLink}
                     >
                       <h6>Fairies</h6>
@@ -99,8 +107,11 @@ const Navigation = ({
                   {/* Fireflies */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#fireflies"
-                      onClick={onLinkClick}
+                      href="#plan"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        smoothScrollTo("plan");
+                      }}
                       className={css.subLink}
                     >
                       <h6>Fireflies</h6>
@@ -109,8 +120,11 @@ const Navigation = ({
                   {/* Firebirds */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#firebirds"
-                      onClick={onLinkClick}
+                      href="#plan"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        smoothScrollTo("plan");
+                      }}
                       className={css.subLink}
                     >
                       <h6>Firebirds</h6>
@@ -119,8 +133,11 @@ const Navigation = ({
                   {/* Forces */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#forces"
-                      onClick={onLinkClick}
+                      href="#plan"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        smoothScrollTo("plan");
+                      }}
                       className={css.subLink}
                     >
                       <h6>Forces</h6>
@@ -129,8 +146,11 @@ const Navigation = ({
                   {/* Firestorm */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#firestorm"
-                      onClick={onLinkClick}
+                      href="#plan"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        smoothScrollTo("plan");
+                      }}
                       className={css.subLink}
                     >
                       <h6>Firestorm</h6>
