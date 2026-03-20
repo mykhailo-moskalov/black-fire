@@ -5,6 +5,10 @@
   gap: 16px;
 }
 
+.heading {
+  align-self: start;
+}
+
 .storyText {
   text-align: center;
 }

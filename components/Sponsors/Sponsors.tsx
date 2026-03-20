@@ -8,7 +8,11 @@ const Sponsors = () => {
   return (
     <Section id="sponsors" className={css.sponsors}>
       <Container className={css.container}>
-        <h2 className={css.heading}>Unsere Sponsoren</h2>
+        <h2 className={css.heading}>
+          Unsere
+          <br />
+          <span className="pad">Sponsoren</span>
+        </h2>
         <ul className={css.sponsorsList}>
           <li className={css.sponsorsItem}>
             <Link

@@ -1,8 +1,8 @@
 import css from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
 import Story from "@/components/Story/Story";
-import Plan from "@/components/Plan/Plan";
-import Crew from "@/components/Crew/Crew";
+import Trainings from "@/components/Trainings/Trainings";
+import Team from "@/components/Team/Team";
 import Sponsors from "@/components/Sponsors/Sponsors";
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
     <div className={css.page}>
       <Hero />
       <Story />
-      <Plan />
-      <Crew />
+      <Trainings />
+      <Team />
       <Sponsors />
     </div>
   );

@@ -76,6 +76,10 @@ h6 {
   }
 }
 
+span.pad {
+  padding-left: 0.25lh;
+}
+
 button {
   border: 0;
   background-color: transparent;

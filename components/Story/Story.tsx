@@ -7,7 +7,11 @@ const Story = () => {
   return (
     <Section id="story" className={css.story}>
       <Container className={css.container}>
-        <h2 className={css.heading}>Unsere Geschichte</h2>
+        <h2 className={css.heading}>
+          Unsere
+          <br />
+          <span className="pad">Geschichte</span>
+        </h2>
         <p className={css.storyText}>
           Black Fire Cheer and Dance wurde im Jänner 2025 von Anna (Gründerin,
           Headcoach & sportliche Leitung) gemeinsam mit Bettina ins Leben

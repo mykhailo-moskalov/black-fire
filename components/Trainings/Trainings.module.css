@@ -11,4 +11,10 @@
 
   height: auto !important;
   padding: 16px 32px;
+
+  & h4,
+  h6,
+  p:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
