@@ -12,9 +12,14 @@ import { smoothScrollTo } from "@/lib/utils/smoothScroll";
 interface NavigationProps {
   className?: string;
   chevronClassName?: string;
+  onLinkClick?: () => void;
 }
 
-const Navigation = ({ className, chevronClassName }: NavigationProps) => {
+const Navigation = ({
+  className,
+  chevronClassName,
+  onLinkClick,
+}: NavigationProps) => {
   const isMobile = useWidthStore((state) => state.isMobile);
 
   return (
@@ -26,6 +31,7 @@ const Navigation = ({ className, chevronClassName }: NavigationProps) => {
             onClick={(e) => {
               e.preventDefault();
               smoothScrollTo("hero");
+              onLinkClick?.();
             }}
             className={css.navigationLink}
             href="#hero"
@@ -43,6 +49,7 @@ const Navigation = ({ className, chevronClassName }: NavigationProps) => {
             onClick={(e) => {
               e.preventDefault();
               smoothScrollTo("story");
+              onLinkClick?.();
             }}
             className={css.navigationLink}
             href="#story"
@@ -85,6 +92,7 @@ const Navigation = ({ className, chevronClassName }: NavigationProps) => {
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("plan");
+                        onLinkClick?.();
                       }}
                       className={css.subLink}
                     >
@@ -98,6 +106,7 @@ const Navigation = ({ className, chevronClassName }: NavigationProps) => {
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("plan");
+                        onLinkClick?.();
                       }}
                       className={css.subLink}
                     >
@@ -111,6 +120,7 @@ const Navigation = ({ className, chevronClassName }: NavigationProps) => {
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("plan");
+                        onLinkClick?.();
                       }}
                       className={css.subLink}
                     >
@@ -124,6 +134,7 @@ const Navigation = ({ className, chevronClassName }: NavigationProps) => {
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("plan");
+                        onLinkClick?.();
                       }}
                       className={css.subLink}
                     >
@@ -137,6 +148,7 @@ const Navigation = ({ className, chevronClassName }: NavigationProps) => {
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("plan");
+                        onLinkClick?.();
                       }}
                       className={css.subLink}
                     >
@@ -150,6 +162,7 @@ const Navigation = ({ className, chevronClassName }: NavigationProps) => {
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("plan");
+                        onLinkClick?.();
                       }}
                       className={css.subLink}
                     >
