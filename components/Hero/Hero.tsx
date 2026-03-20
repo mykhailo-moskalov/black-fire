@@ -36,14 +36,14 @@ const Hero = () => {
         </h3>
 
         <Link
-          href="#teams"
+          href="#trainings"
           onClick={(e) => {
             e.preventDefault();
-            smoothScrollTo("teams");
+            smoothScrollTo("trainings");
           }}
           className={css.link}
         >
-          Unsere Teams
+          Unsere Trainings
         </Link>
       </Container>
       <div ref={bottomDivRef} className={css.bottomDiv}></div>
