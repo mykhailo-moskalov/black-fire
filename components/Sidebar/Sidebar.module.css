@@ -25,10 +25,8 @@
   background-color: var(--primary-color-op);
   box-shadow: var(--box-shadow);
 
-  @media only screen and (min-width: 768px) {
-  }
-
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (max-height: 700px) {
+    margin-top: 75%;
   }
 }
 .closed {
@@ -61,10 +59,8 @@
   width: 32px;
   height: 32px;
 
-  @media only screen and (min-width: 768px) {
-  }
-
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (max-height: 700px) {
+    margin-top: 75%;
   }
 }
 
@@ -72,9 +68,6 @@
   margin-top: auto;
 
   text-align: center;
-
-  @media only screen and (max-height: 763vh) {
-  }
 }
 
 .btnLang {
@@ -82,10 +75,4 @@
   height: 32px;
 
   margin-top: auto;
-
-  @media only screen and (min-width: 768px) {
-  }
-
-  @media only screen and (min-width: 1440px) {
-  }
 }

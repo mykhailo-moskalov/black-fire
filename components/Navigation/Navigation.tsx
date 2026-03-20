@@ -88,10 +88,10 @@ const Navigation = ({
                   {/* Mini Flames */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#plan"
+                      href="#miniFlames"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("plan");
+                        smoothScrollTo("miniFlames");
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -102,10 +102,10 @@ const Navigation = ({
                   {/* Fairies */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#plan"
+                      href="#fairies"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("plan");
+                        smoothScrollTo("fairies");
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -116,10 +116,10 @@ const Navigation = ({
                   {/* Fireflies */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#plan"
+                      href="#fireflies"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("plan");
+                        smoothScrollTo("fireflies");
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -130,10 +130,10 @@ const Navigation = ({
                   {/* Firebirds */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#plan"
+                      href="#firebirds"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("plan");
+                        smoothScrollTo("firebirds");
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -144,10 +144,10 @@ const Navigation = ({
                   {/* Forces */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#plan"
+                      href="#forces"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("plan");
+                        smoothScrollTo("forces");
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -158,10 +158,10 @@ const Navigation = ({
                   {/* Firestorm */}
                   <li className={css.subNavigationItem}>
                     <Link
-                      href="#plan"
+                      href="#firestorm"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("plan");
+                        smoothScrollTo("firestorm");
                         onLinkClick?.();
                       }}
                       className={css.subLink}

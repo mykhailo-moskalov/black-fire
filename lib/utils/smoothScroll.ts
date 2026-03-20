@@ -2,8 +2,13 @@ export const smoothScrollTo = (id: string) => {
   const el = document.getElementById(id);
   if (!el) return;
 
+  const headerHeight = parseInt(
+    getComputedStyle(document.documentElement).getPropertyValue(
+      "--header-height",
+    ) || "0",
+  );
   const start = window.scrollY;
-  const end = el.getBoundingClientRect().top + window.scrollY;
+  const end = el.getBoundingClientRect().top + window.scrollY - headerHeight;
   const duration = 1000;
   const startTime = performance.now();
 
