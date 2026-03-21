@@ -124,21 +124,22 @@ const Team = () => {
             />
             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
           </SwiperSlide>
+          <div className={css.navBox}>
+            <button
+              className={css.navBtn}
+              onClick={() => swiperRef.current?.slidePrev()}
+            >
+              <IoChevronBack />
+            </button>
+            <button
+              className={css.navBtn}
+              onClick={() => swiperRef.current?.slideNext()}
+            >
+              <IoChevronForward />
+            </button>
+          </div>
         </Swiper>
-        <div className={css.navBox}>
-          <button
-            className={css.navBtn}
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            <IoChevronBack />
-          </button>
-          <button
-            className={css.navBtn}
-            onClick={() => swiperRef.current?.slideNext()}
-          >
-            <IoChevronForward />
-          </button>
-        </div>
+
         <Swiper
           onSwiper={setThumbsSwiper}
           loop={true}
