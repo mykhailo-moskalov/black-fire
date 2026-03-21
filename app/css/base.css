@@ -87,15 +87,15 @@ button {
 
 button,
 a {
-  &:hover,
-  &:focus {
-    transform: translateY(-20%);
-    box-shadow: none;
-  }
-
   &:focus-visible {
     outline: none !important;
   }
+}
+
+a:hover,
+a:focus {
+  transform: translateY(-20%);
+  box-shadow: none;
 }
 
 svg {

@@ -26,6 +26,7 @@ const Trainings = () => {
           loop={true}
           centeredSlides={true}
           autoHeight={false}
+          grabCursor={true}
           className={css.swiper}
         >
           <SwiperSlide id="miniFlames" className={css.swiperSlide}>
