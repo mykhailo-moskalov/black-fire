@@ -102,7 +102,7 @@ const Navigation = ({
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("trainings");
-                        swiper?.slideToLoop(teamIds.indexOf("miniFlames");
+                        swiper?.slideToLoop(teamIds.indexOf("miniFlames"));
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -117,7 +117,7 @@ const Navigation = ({
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("trainings");
-                        swiper?.slideToLoop(teamIds.indexOf("fairies");
+                        swiper?.slideToLoop(teamIds.indexOf("fairies"));
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -132,7 +132,7 @@ const Navigation = ({
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("trainings");
-                        swiper?.slideToLoop(teamIds.indexOf("fireflies");
+                        swiper?.slideToLoop(teamIds.indexOf("fireflies"));
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -147,7 +147,7 @@ const Navigation = ({
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("trainings");
-                        swiper?.slideToLoop(teamIds.indexOf("firebirds");
+                        swiper?.slideToLoop(teamIds.indexOf("firebirds"));
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -162,7 +162,7 @@ const Navigation = ({
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("trainings");
-                        swiper?.slideToLoop(teamIds.indexOf("forces");
+                        swiper?.slideToLoop(teamIds.indexOf("forces"));
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -177,7 +177,7 @@ const Navigation = ({
                       onClick={(e) => {
                         e.preventDefault();
                         smoothScrollTo("trainings");
-                        swiper?.slideToLoop(teamIds.indexOf("firestorm");
+                        swiper?.slideToLoop(teamIds.indexOf("firestorm"));
                         onLinkClick?.();
                       }}
                       className={css.subLink}
