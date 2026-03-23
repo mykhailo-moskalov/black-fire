@@ -34,10 +34,10 @@ const Team = () => {
           thumbs={{ swiper: thumbsSwiper }}
           className={css.swiper}
         >
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
-              width={200}
-              height={300}
+              width={250}
+              height={375}
               alt="Gründerinnen Anna Ableidinger & Bettina Beneda"
               src="/"
               loading="lazy"
@@ -46,64 +46,64 @@ const Team = () => {
               Gründerinnen Anna Ableidinger & Bettina Beneda
             </p>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
-              width={200}
-              height={300}
+              width={250}
+              height={375}
               alt="Unsere Trainerinnen"
               src="/"
               loading="lazy"
             />
             <p className={css.slideDesc}>Unsere Trainerinnen</p>
           </SwiperSlide>
-          <SwiperSlide>
-            <Image width={200} height={300} alt="Alle" src="/" loading="lazy" />
+          <SwiperSlide className={css.swiperSlide}>
+            <Image width={250} height={375} alt="Alle" src="/" loading="lazy" />
             <p className={css.slideDesc}>Alle</p>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
-              width={200}
-              height={300}
+              width={250}
+              height={375}
               alt="Fairies"
               src="/"
               loading="lazy"
             />
             <p className={css.slideDesc}>Fairies</p>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
-              width={200}
-              height={300}
+              width={250}
+              height={375}
               alt="Fireflies"
               src="/"
               loading="lazy"
             />
             <p className={css.slideDesc}>Fireflies</p>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
-              width={200}
-              height={300}
+              width={250}
+              height={375}
               alt="Firebirds"
               src="/"
               loading="lazy"
             />
             <p className={css.slideDesc}>Firebirds</p>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
-              width={200}
-              height={300}
+              width={250}
+              height={375}
               alt="Forces"
               src="/"
               loading="lazy"
             />
             <p className={css.slideDesc}>Forces</p>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
-              width={200}
-              height={300}
+              width={250}
+              height={375}
               alt="Firestorm"
               src="/"
               loading="lazy"
@@ -136,7 +136,7 @@ const Team = () => {
           modules={[FreeMode, Navigation, Thumbs]}
           className={css.swiperBottom}
         >
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={20}
@@ -145,7 +145,7 @@ const Team = () => {
               loading="lazy"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={20}
@@ -154,10 +154,10 @@ const Team = () => {
               loading="lazy"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image width={60} height={20} alt="Alle" src="/" loading="lazy" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={20}
@@ -166,7 +166,7 @@ const Team = () => {
               loading="lazy"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={20}
@@ -175,7 +175,7 @@ const Team = () => {
               loading="lazy"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={20}
@@ -184,10 +184,10 @@ const Team = () => {
               loading="lazy"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image width={60} height={20} alt="Forces" src="/" loading="lazy" />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={20}
