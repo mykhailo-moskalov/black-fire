@@ -8,6 +8,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { useWidthStore } from "@/lib/store/widthStore";
 import { IoChevronDown } from "react-icons/io5";
 import { smoothScrollTo } from "@/lib/utils/smoothScroll";
+import { useTrainingsStore } from "@/lib/store/trainingsStore";
 
 interface NavigationProps {
   className?: string;
@@ -21,6 +22,15 @@ const Navigation = ({
   onLinkClick,
 }: NavigationProps) => {
   const isMobile = useWidthStore((state) => state.isMobile);
+  const swiper = useTrainingsStore((state) => state.swiper);
+  const teamIds = [
+    "miniFlames",
+    "fairies",
+    "fireflies",
+    "firebirds",
+    "forces",
+    "firestorm",
+  ];
 
   return (
     <nav className={`${css.nav} ${className}`} aria-label="Main Navigation">
@@ -91,7 +101,8 @@ const Navigation = ({
                       href="#miniFlames"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("miniFlames");
+                        smoothScrollTo("trainings");
+                        swiper?.slideTo(teamIds.indexOf("miniFlames") + 1);
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -105,7 +116,8 @@ const Navigation = ({
                       href="#fairies"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("fairies");
+                        smoothScrollTo("trainings");
+                        swiper?.slideTo(teamIds.indexOf("fairies") + 1);
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -119,7 +131,8 @@ const Navigation = ({
                       href="#fireflies"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("fireflies");
+                        smoothScrollTo("trainings");
+                        swiper?.slideTo(teamIds.indexOf("fireflies") + 1);
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -133,7 +146,8 @@ const Navigation = ({
                       href="#firebirds"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("firebirds");
+                        smoothScrollTo("trainings");
+                        swiper?.slideTo(teamIds.indexOf("firebirds") + 1);
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -147,7 +161,8 @@ const Navigation = ({
                       href="#forces"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("forces");
+                        smoothScrollTo("trainings");
+                        swiper?.slideTo(teamIds.indexOf("forces") + 1);
                         onLinkClick?.();
                       }}
                       className={css.subLink}
@@ -161,7 +176,8 @@ const Navigation = ({
                       href="#firestorm"
                       onClick={(e) => {
                         e.preventDefault();
-                        smoothScrollTo("firestorm");
+                        smoothScrollTo("trainings");
+                        swiper?.slideTo(teamIds.indexOf("firestorm") + 1);
                         onLinkClick?.();
                       }}
                       className={css.subLink}

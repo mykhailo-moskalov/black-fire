@@ -38,92 +38,79 @@ const Team = () => {
             <Image
               width={200}
               height={300}
-              alt=""
-              src="/hero/hero-min.webp"
+              alt="Gründerinnen Anna Ableidinger & Bettina Beneda"
+              src="/"
               loading="lazy"
             />
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <p className={css.slideDesc}>
+              Gründerinnen Anna Ableidinger & Bettina Beneda
+            </p>
           </SwiperSlide>
           <SwiperSlide>
             <Image
               width={200}
               height={300}
-              alt=""
-              src="/sponsors/LOGO-GCClean.png"
+              alt="Unsere Trainerinnen"
+              src="/"
               loading="lazy"
             />
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <p className={css.slideDesc}>Unsere Trainerinnen</p>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image width={200} height={300} alt="Alle" src="/" loading="lazy" />
+            <p className={css.slideDesc}>Alle</p>
           </SwiperSlide>
           <SwiperSlide>
             <Image
               width={200}
               height={300}
-              alt=""
-              src="/hero/hero-min.webp"
+              alt="Fairies"
+              src="/"
               loading="lazy"
             />
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <p className={css.slideDesc}>Fairies</p>
           </SwiperSlide>
           <SwiperSlide>
             <Image
               width={200}
               height={300}
-              alt=""
-              src="/sponsors/LOGO-GCClean.png"
+              alt="Fireflies"
+              src="/"
               loading="lazy"
             />
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <p className={css.slideDesc}>Fireflies</p>
           </SwiperSlide>
           <SwiperSlide>
             <Image
               width={200}
               height={300}
-              alt=""
-              src="/hero/hero-min.webp"
+              alt="Firebirds"
+              src="/"
               loading="lazy"
             />
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <p className={css.slideDesc}>Firebirds</p>
           </SwiperSlide>
           <SwiperSlide>
             <Image
               width={200}
               height={300}
-              alt=""
-              src="/sponsors/LOGO-GCClean.png"
+              alt="Forces"
+              src="/"
               loading="lazy"
             />
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <p className={css.slideDesc}>Forces</p>
           </SwiperSlide>
           <SwiperSlide>
             <Image
               width={200}
               height={300}
-              alt=""
-              src="/hero/hero-min.webp"
+              alt="Firestorm"
+              src="/"
               loading="lazy"
             />
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <p className={css.slideDesc}>Firestorm</p>
           </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              width={200}
-              height={300}
-              alt=""
-              src="/sponsors/LOGO-GCClean.png"
-              loading="lazy"
-            />
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              width={200}
-              height={300}
-              alt=""
-              src="/hero/hero-min.webp"
-              loading="lazy"
-            />
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-          </SwiperSlide>
+
           <div className={css.navBox}>
             <button
               className={css.navBtn}
@@ -139,7 +126,6 @@ const Team = () => {
             </button>
           </div>
         </Swiper>
-
         <Swiper
           onSwiper={setThumbsSwiper}
           loop={true}
@@ -154,8 +140,8 @@ const Team = () => {
             <Image
               width={60}
               height={20}
-              alt=""
-              src="/hero/hero-min.webp"
+              alt="Gründerinnen Anna Ableidinger & Bettina Beneda"
+              src="/"
               loading="lazy"
             />
           </SwiperSlide>
@@ -163,8 +149,20 @@ const Team = () => {
             <Image
               width={60}
               height={20}
-              alt=""
-              src="/sponsors/LOGO-GCClean.png"
+              alt="Unsere Trainerinnen"
+              src="/"
+              loading="lazy"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image width={60} height={20} alt="Alle" src="/" loading="lazy" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              width={60}
+              height={20}
+              alt="Fairies"
+              src="/"
               loading="lazy"
             />
           </SwiperSlide>
@@ -172,8 +170,8 @@ const Team = () => {
             <Image
               width={60}
               height={20}
-              alt=""
-              src="/hero/hero-min.webp"
+              alt="Fireflies"
+              src="/"
               loading="lazy"
             />
           </SwiperSlide>
@@ -181,62 +179,20 @@ const Team = () => {
             <Image
               width={60}
               height={20}
-              alt=""
-              src="/sponsors/LOGO-GCClean.png"
+              alt="Firebirds"
+              src="/"
               loading="lazy"
             />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image width={60} height={20} alt="Forces" src="/" loading="lazy" />
           </SwiperSlide>
           <SwiperSlide>
             <Image
               width={60}
               height={20}
-              alt=""
-              src="/hero/hero-min.webp"
-              loading="lazy"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              width={60}
-              height={20}
-              alt=""
-              src="/sponsors/LOGO-GCClean.png"
-              loading="lazy"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              width={60}
-              height={20}
-              alt=""
-              src="/hero/hero-min.webp"
-              loading="lazy"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              width={60}
-              height={20}
-              alt=""
-              src="/sponsors/LOGO-GCClean.png"
-              loading="lazy"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              width={60}
-              height={20}
-              alt=""
-              src="/hero/hero-min.webp"
-              loading="lazy"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              width={60}
-              height={20}
-              alt=""
-              src="/sponsors/LOGO-GCClean.png"
+              alt="Firestorm"
+              src="/"
               loading="lazy"
             />
           </SwiperSlide>

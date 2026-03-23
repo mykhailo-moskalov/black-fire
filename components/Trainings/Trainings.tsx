@@ -3,12 +3,15 @@
 import Container from "../Container/Container";
 import Section from "../Section/Section";
 import css from "./Trainings.module.css";
+import { useTrainingsStore } from "@/lib/store/trainingsStore";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/bundle";
 
 const Trainings = () => {
+  const setSwiper = useTrainingsStore((state) => state.setSwiper);
+
   return (
     <Section id="trainings" className={css.trainings}>
       <Container className={css.container}>
@@ -18,6 +21,7 @@ const Trainings = () => {
           <span className="pad">Trainings</span>
         </h2>
         <Swiper
+          onSwiper={setSwiper}
           spaceBetween={50}
           slidesPerView={1}
           modules={[Pagination, Autoplay]}
