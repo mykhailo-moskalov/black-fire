@@ -1,9 +1,3 @@
 .logo {
-  display: flex;
-  align-items: center;
-  align-self: flex-start;
-  justify-content: space-between;
-  flex-shrink: 0;
-
   transform: none !important;
 }

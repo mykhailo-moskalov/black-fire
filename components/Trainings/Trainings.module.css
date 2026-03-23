@@ -6,7 +6,7 @@
 
 .swiperSlide {
   color: var(--background);
-  background-color: var(--primary-color-op);
+  background-color: var(--primary-color);
   border-radius: 24px;
 
   height: auto !important;

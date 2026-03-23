@@ -139,7 +139,7 @@ const Team = () => {
           <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
-              height={20}
+              height={90}
               alt="Gründerinnen Anna Ableidinger & Bettina Beneda"
               src="/"
               loading="lazy"
@@ -148,19 +148,19 @@ const Team = () => {
           <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
-              height={20}
+              height={90}
               alt="Unsere Trainerinnen"
               src="/"
               loading="lazy"
             />
           </SwiperSlide>
           <SwiperSlide className={css.swiperSlide}>
-            <Image width={60} height={20} alt="Alle" src="/" loading="lazy" />
+            <Image width={60} height={90} alt="Alle" src="/" loading="lazy" />
           </SwiperSlide>
           <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
-              height={20}
+              height={90}
               alt="Fairies"
               src="/"
               loading="lazy"
@@ -169,7 +169,7 @@ const Team = () => {
           <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
-              height={20}
+              height={90}
               alt="Fireflies"
               src="/"
               loading="lazy"
@@ -178,19 +178,19 @@ const Team = () => {
           <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
-              height={20}
+              height={90}
               alt="Firebirds"
               src="/"
               loading="lazy"
             />
           </SwiperSlide>
           <SwiperSlide className={css.swiperSlide}>
-            <Image width={60} height={20} alt="Forces" src="/" loading="lazy" />
+            <Image width={60} height={90} alt="Forces" src="/" loading="lazy" />
           </SwiperSlide>
           <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
-              height={20}
+              height={90}
               alt="Firestorm"
               src="/"
               loading="lazy"

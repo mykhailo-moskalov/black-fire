@@ -9,53 +9,47 @@ const Footer = () => {
   return (
     <footer id="footer" className={css.footer}>
       <Container className={css.container}>
-        <ul className={css.columnsList}>
-          <li className={css.columnsItem}>
-            <Logo width={60} height={95} />
+        <Logo width={60} height={95} />
+        <ul className={css.socialsList}>
+          <li className={css.socialsItem}>
+            <Link
+              href="https://www.instagram.com/blackfirecheer/"
+              target="_blank"
+              className={css.socialsLink}
+            >
+              <IoLogoInstagram />
+              blackfirecheer
+            </Link>
           </li>
-          <li className={css.columnsItem}>
-            <ul className={css.socialsList}>
-              <li className={css.socialsItem}>
-                <Link
-                  href="https://www.instagram.com/blackfirecheer/"
-                  target="_blank"
-                  className={css.socialsLink}
-                >
-                  <IoLogoInstagram />
-                  blackfirecheer
-                </Link>
-              </li>
-              <li className={css.socialsItem}>
-                <Link
-                  href="tel:+4366442330063"
-                  target="_blank"
-                  className={css.socialsLink}
-                >
-                  <FaPhoneAlt />
-                  +4366442330063
-                </Link>
-              </li>
-              <li className={css.socialsItem}>
-                <Link
-                  href="https://maps.app.goo.gl/LHXVDDkNTqQy34UD6"
-                  target="_blank"
-                  className={css.socialsLink}
-                >
-                  <IoLocation />
-                  Kindbergstraße 14 2331 VÖSENDORF
-                </Link>
-              </li>
-              <li className={css.socialsItem}>
-                <Link
-                  href="mailto:office@blackfirecheer.at"
-                  target="_blank"
-                  className={css.socialsLink}
-                >
-                  <IoMail />
-                  office@blackfirecheer.at
-                </Link>
-              </li>
-            </ul>
+          <li className={css.socialsItem}>
+            <Link
+              href="tel:+4366442330063"
+              target="_blank"
+              className={css.socialsLink}
+            >
+              <FaPhoneAlt />
+              +4366442330063
+            </Link>
+          </li>
+          <li className={css.socialsItem}>
+            <Link
+              href="https://maps.app.goo.gl/LHXVDDkNTqQy34UD6"
+              target="_blank"
+              className={css.socialsLink}
+            >
+              <IoLocation />
+              Kindbergstraße 14 2331 VÖSENDORF
+            </Link>
+          </li>
+          <li className={css.socialsItem}>
+            <Link
+              href="mailto:office@blackfirecheer.at"
+              target="_blank"
+              className={css.socialsLink}
+            >
+              <IoMail />
+              office@blackfirecheer.at
+            </Link>
           </li>
         </ul>
         <p className={css.copyright}>
