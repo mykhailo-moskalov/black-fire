@@ -35,7 +35,7 @@ const Navigation = ({
   return (
     <nav className={`${css.nav} ${className}`} aria-label="Main Navigation">
       <ul className={css.navigation}>
-        {/* Startseite */}
+        {/* Startseite
         <li className={css.navigationItem}>
           <Link
             onClick={(e) => {
@@ -52,7 +52,7 @@ const Navigation = ({
               <h5 className={css.navigationTitle}>Startseite</h5>
             )}
           </Link>
-        </li>
+        </li> */}
         {/* Über uns */}
         <li className={css.navigationItem}>
           <Link
@@ -190,6 +190,15 @@ const Navigation = ({
             </Accordion.Item>
           </Accordion.Root>
         </li>
+        {/* <li className={css.navigationItem}>
+          <Link className={css.navigationLink} href="/app/imressum/page.tsx">
+            {isMobile ? (
+              <h4 className={css.navigationTitle}>Impressum</h4>
+            ) : (
+              <h5 className={css.navigationTitle}>Impressum</h5>
+            )}
+          </Link>
+        </li> */}
       </ul>
     </nav>
   );
