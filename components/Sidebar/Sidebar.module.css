@@ -61,7 +61,7 @@
 
   text-align: center;
 
-  @media only screen and (min-height: 750px) {
+  @media only screen and (min-height: 840px) {
     margin-top: 100%;
   }
 }
