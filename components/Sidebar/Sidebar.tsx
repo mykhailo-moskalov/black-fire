@@ -38,7 +38,8 @@ export default function Sidebar() {
     };
   }, [isOpen, setIsOpen]);
 
-  if (!isMobile || pathname === "/impressum") return null;
+  if (!isMobile || pathname === "/legal") return null;
+
   return (
     <div
       className={`${css.backdrop} ${isOpen ? css.show : css.hide}`}
