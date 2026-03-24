@@ -19,10 +19,10 @@ export default function Impressum() {
           <h2 className={css.heading}>Angaben gemäß § 5 ECG</h2>
           <ul className={css.list}>
             <li>
-              <p>Verein BlackFire Cheer & Dance</p>
+              <p>Verein BlackFire Cheer&Dance</p>
             </li>
             <li>
-              <p>Kindbergstraße 14</p>
+              <p>Ortsstraße 214/3/26</p>
             </li>
             <li>
               <p>2331 Vösendorf</p>
@@ -51,14 +51,7 @@ export default function Impressum() {
       <Section className={css.section}>
         <Container className={css.container}>
           <h2 className={css.heading}>Vereinsregister</h2>
-          <ul className={css.list}>
-            <li>
-              <p>Vereinsregisternummer: [Nummer eintragen]</p>
-            </li>
-            <li>
-              <p>Zuständige Behörde: [Behörde eintragen]</p>
-            </li>
-          </ul>
+          <p>Vereinsregisternummer: 1092922401</p>
         </Container>
       </Section>
 
