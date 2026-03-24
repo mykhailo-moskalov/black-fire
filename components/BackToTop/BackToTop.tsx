@@ -16,6 +16,7 @@ export default function BackToTop() {
 
   return (
     <button
+      aria-label="Zurück nach oben"
       className={`${css.btn} ${visible ? css.visible : ""}`}
       onClick={() => smoothScrollTo("hero")}
     >
