@@ -1,6 +1,6 @@
 "use client";
 
-import { IoMenu } from "react-icons/io5";
+import { IoArrowBack, IoMenu } from "react-icons/io5";
 import Logo from "../Logo/Logo";
 import Container from "../Container/Container";
 import Navigation from "../Navigation/Navigation";
@@ -8,12 +8,18 @@ import css from "./Header.module.css";
 import { useSidebarStore } from "@/lib/store/sidebarStore";
 import { useWidthStore } from "@/lib/store/widthStore";
 import { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
   const isMobile = useWidthStore((state) => state.isMobile);
   const headerRef = useRef<HTMLElement>(null);
-  const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const isLegal = pathname === "/legal";
+
+  const [scrolled, setScrolled] = useState(isLegal);
 
   useEffect(() => {
     const updateHeight = () => {
@@ -24,6 +30,8 @@ const Header = () => {
         );
       }
     };
+
+    if (isLegal) return;
 
     const handleScroll = () => {
       console.log("scrollY", window.scrollY);
@@ -39,7 +47,7 @@ const Header = () => {
       window.removeEventListener("resize", updateHeight);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isLegal]);
 
   return (
     <header
@@ -51,9 +59,16 @@ const Header = () => {
         <Logo width={40} height={(95 / 3) * 2} />
 
         {isMobile ? (
-          <button className={css.burger} onClick={() => setIsOpen(true)}>
-            <IoMenu />
-          </button>
+          isLegal ? (
+            <button onClick={router.back} className={css.btn}>
+              <IoArrowBack />
+              Zurück zur Startseite
+            </button>
+          ) : (
+            <button className={css.burger} onClick={() => setIsOpen(true)}>
+              <IoMenu />
+            </button>
+          )
         ) : (
           <Navigation className={css.nav} />
         )}

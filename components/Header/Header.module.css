@@ -30,6 +30,18 @@
   justify-content: space-between;
 }
 
+.btn {
+  display: flex;
+  gap: 4px;
+
+  color: var(--background);
+
+  & svg {
+    height: 1lh;
+    width: 1lh;
+  }
+}
+
 .burger {
   height: 32px;
   width: 32px;

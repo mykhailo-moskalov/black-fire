@@ -1,0 +1,24 @@
+.main {
+  color: var(--foreground);
+}
+
+.section {
+  padding: 16px 0;
+  &:nth-child(1) {
+    padding-top: calc(var(--header-height) + 32px);
+  }
+  &:nth-child(2) {
+    padding-top: 16px;
+  }
+  &:last-child {
+    padding: 16px 0 32px;
+  }
+}
+
+.heading {
+  font-size: 28px;
+}
+
+.list {
+  list-style-type: circle;
+}

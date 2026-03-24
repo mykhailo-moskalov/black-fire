@@ -10,11 +10,13 @@ import { useSidebarStore } from "@/lib/store/sidebarStore";
 import { IoClose, IoGlobe } from "react-icons/io5";
 import toast from "react-hot-toast";
 import Container from "../Container/Container";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
   const isMobile = useWidthStore((state) => state.isMobile);
   const isOpen = useSidebarStore((state) => state.isOpen);
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
+  const pathname = usePathname();
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) setIsOpen(false);
@@ -36,8 +38,7 @@ export default function Sidebar() {
     };
   }, [isOpen, setIsOpen]);
 
-  if (!isMobile) return null;
-
+  if (!isMobile || pathname === "/impressum") return null;
   return (
     <div
       className={`${css.backdrop} ${isOpen ? css.show : css.hide}`}

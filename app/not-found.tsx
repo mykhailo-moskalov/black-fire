@@ -1,28 +1,46 @@
-"use client";
-
+import { Metadata } from "next";
 import css from "./page.module.css";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import Section from "@/components/Section/Section";
+import Container from "@/components/Container/Container";
+
+export const metadata: Metadata = {
+  title: "Non-existent page",
+  description: "This page does not exist",
+  openGraph: {
+    title: "Non-existent page",
+    description: "This page does not exist",
+    url: `https://blackfirecheer.at/not-found`,
+    images: [
+      {
+        url: "/app/icon1.png",
+        width: 96,
+        height: 96,
+        alt: "Black Fire Cheer",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Non-existent page`,
+    description: "This page does not exist",
+    images: ["/app/icon1.png"],
+  },
+};
 
 const NotFound = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    const timer = setTimeout(() => router.push("/"), 3000);
-
-    return () => clearTimeout(timer);
-  }, [router]);
-
   return (
-    <>
-      <h1 className={css.title}>404 - Page not found</h1>
-      <p className={css.description}>
-        Sorry, the page you are looking for does not exist.
-        <br />
-        <br />
-        You will be redirected to the homepage in a while.
-      </p>
-    </>
+    <Section>
+      <Container>
+        <h1 className={css.title} style={{ marginBottom: 32 }}>
+          404 - Page not found
+        </h1>
+        <p className={css.description}>
+          Sorry, the page you are looking for does not exist.
+        </p>
+        <p>You will be redirected to the homepage in a while.</p>
+      </Container>
+    </Section>
   );
 };
 

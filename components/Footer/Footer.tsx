@@ -52,7 +52,9 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
-        <Link href="/app/legal/page.tsx">Impressum</Link>
+        <Link href="/legal" className={css.impressumLink}>
+          Impressum
+        </Link>
         <p className={css.copyright}>
           &copy; {new Date().getFullYear()} Verein BlackFire Cheer&Dance
         </p>
