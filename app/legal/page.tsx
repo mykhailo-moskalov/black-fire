@@ -5,7 +5,7 @@ import Container from "@/components/Container/Container";
 import css from "./Impressum.module.css";
 import BackToTop from "@/components/BackToTop/BackToTop";
 
-export default function Impressum() {
+export default function Legal() {
   return (
     <main className={css.main}>
       <Section className={css.section}>
