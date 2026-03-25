@@ -9,9 +9,6 @@ h1 {
   @media only screen and (min-width: 768px) {
     font-size: 56px;
   }
-
-  @media only screen and (min-width: 1440px) {
-  }
 }
 
 h2 {
@@ -23,9 +20,6 @@ h2 {
   @media only screen and (min-width: 768px) {
     font-size: 48px;
   }
-
-  @media only screen and (min-width: 1440px) {
-  }
 }
 
 h3 {
@@ -35,9 +29,6 @@ h3 {
   @media only screen and (min-width: 768px) {
     font-size: 32px;
   }
-
-  @media only screen and (min-width: 1440px) {
-  }
 }
 
 h4 {
@@ -45,9 +36,6 @@ h4 {
   line-height: 140%;
   @media only screen and (min-width: 768px) {
     font-size: 20px;
-  }
-
-  @media only screen and (min-width: 1440px) {
   }
 }
 
