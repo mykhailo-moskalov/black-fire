@@ -33,10 +33,7 @@ const Header = () => {
 
     if (isLegal) return;
 
-    const handleScroll = () => {
-      console.log("scrollY", window.scrollY);
-      setScrolled(window.scrollY >= 300);
-    };
+    const handleScroll = () => setScrolled(window.scrollY >= 300);
 
     updateHeight();
 
