@@ -31,9 +31,9 @@ const Hero = () => {
     <Section id="hero" className={css.hero}>
       <Container className={css.container}>
         <h1 className={css.heading}>No Limits</h1>
-        <h3 className={css.subHeading}>
+        <p className={css.subHeading}>
           kein Weg ist unmöglich mit einer Familie
-        </h3>
+        </p>
 
         <Link
           href="#trainings"

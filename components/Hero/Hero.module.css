@@ -42,6 +42,9 @@
 .subHeading {
   text-transform: uppercase;
   text-align: right;
+  font-size: 32px;
+  line-height: 120%;
+  font-weight: bold;
 }
 
 .link {

@@ -35,19 +35,19 @@ const Trainings = () => {
           className={css.swiper}
         >
           <SwiperSlide id="miniFlames" className={css.swiperSlide}>
-            <h4>Mini Flames</h4>
-            <h6>Plannung:</h6>
+            <h3>Mini Flames</h3>
+            <h4>Plannung:</h4>
             <p>
               Dienstag 16:30 bis 17:30 Uhr,
               <br />
               1100 Wien
             </p>
-            <h6>Alter:</h6>
+            <h4>Alter:</h4>
             <p>3 Jahre bis 7 Jahre</p>
           </SwiperSlide>
           <SwiperSlide id="fairies" className={css.swiperSlide}>
-            <h4>Fairies</h4>
-            <h6>Plannung:</h6>
+            <h3>Fairies</h3>
+            <h4>Plannung:</h4>
             <p>
               Montag 16:30 bis 18 Uhr,
               <br />
@@ -58,12 +58,12 @@ const Trainings = () => {
               <br />
               Brunn am Gebirge
             </p>
-            <h6>Alter:</h6>
+            <h4>Alter:</h4>
             <p>6 Jahre bis 8 Jahre</p>
           </SwiperSlide>
           <SwiperSlide id="fireflies" className={css.swiperSlide}>
-            <h4>Fireflies</h4>
-            <h6>Plannung:</h6>
+            <h3>Fireflies</h3>
+            <h4>Plannung:</h4>
             <p>
               Dienstag 17:00 bis 18:30 Uhr,
               <br />
@@ -79,12 +79,12 @@ const Trainings = () => {
               <br />
               Brunn am Gebirge
             </p>
-            <h6>Alter:</h6>
+            <h4>Alter:</h4>
             <p>8 Jahre bis 12 Jahre</p>
           </SwiperSlide>
           <SwiperSlide id="firebirds" className={css.swiperSlide}>
-            <h4>Firebirds</h4>
-            <h6>Plannung:</h6>
+            <h3>Firebirds</h3>
+            <h4>Plannung:</h4>
             <p>
               Montag 18:00 bis 19:30 Uhr,
               <br />
@@ -100,17 +100,17 @@ const Trainings = () => {
               <br />
               Brunn am Gebirge
             </p>
-            <h6>Alter:</h6>
+            <h4>Alter:</h4>
             <p>12 Jahre bis 15 Jahre</p>
           </SwiperSlide>
           <SwiperSlide id="forces" className={css.swiperSlide}>
-            <h4>Forces</h4>
-            <h6>Alter:</h6>
+            <h3>Forces</h3>
+            <h4>Alter:</h4>
             <p>14 Jahre bis 18 Jahre</p>
           </SwiperSlide>
           <SwiperSlide id="firestorm" className={css.swiperSlide}>
-            <h4>Firestorm</h4>
-            <h6>Alter:</h6>
+            <h3>Firestorm</h3>
+            <h4>Alter:</h4>
             <p>Ab 16 Jahre</p>
           </SwiperSlide>
         </Swiper>

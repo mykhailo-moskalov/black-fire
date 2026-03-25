@@ -29,18 +29,6 @@ h2 {
 }
 
 h3 {
-  font-size: 32px;
-  line-height: 130%;
-
-  @media only screen and (min-width: 768px) {
-    font-size: 40px;
-  }
-
-  @media only screen and (min-width: 1440px) {
-  }
-}
-
-h4 {
   font-size: 24px;
   line-height: 140%;
 
@@ -52,22 +40,9 @@ h4 {
   }
 }
 
-h5 {
-  font-size: 22px;
-  line-height: 140%;
-
-  @media only screen and (min-width: 768px) {
-    font-size: 26px;
-  }
-
-  @media only screen and (min-width: 1440px) {
-  }
-}
-
-h6 {
+h4 {
   font-size: 18px;
   line-height: 140%;
-
   @media only screen and (min-width: 768px) {
     font-size: 20px;
   }
