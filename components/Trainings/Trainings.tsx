@@ -8,6 +8,7 @@ import { useTrainingsStore } from "@/lib/store/trainingsStore";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/bundle";
+import { IoArrowForward } from "react-icons/io5";
 
 const Trainings = () => {
   const setSwiper = useTrainingsStore((state) => state.setSwiper);
@@ -113,6 +114,9 @@ const Trainings = () => {
             <p>Ab 16 Jahre</p>
           </SwiperSlide>
         </Swiper>
+        <p className={css.hint}>
+          Swipe to see more <IoArrowForward />
+        </p>
       </Container>
     </Section>
   );
