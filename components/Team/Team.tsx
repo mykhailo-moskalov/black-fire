@@ -161,12 +161,14 @@ const Team = () => {
 
           <div className={css.navBox}>
             <button
+              aria-label="Vorheriges Foto"
               className={css.navBtn}
               onClick={() => swiperRef.current?.slidePrev()}
             >
               <IoChevronBack />
             </button>
             <button
+              aria-label="Nächstes Foto"
               className={css.navBtn}
               onClick={() => swiperRef.current?.slideNext()}
             >

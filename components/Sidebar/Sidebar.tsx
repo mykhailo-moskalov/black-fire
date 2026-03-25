@@ -49,7 +49,11 @@ export default function Sidebar() {
     >
       <div className={`${css.sidebar} ${isOpen ? css.open : css.closed}`}>
         <Container className={css.sidebarContainer}>
-          <button className={css.btnClose} onClick={() => setIsOpen(false)}>
+          <button
+            aria-label="Menü schließen"
+            className={css.btnClose}
+            onClick={() => setIsOpen(false)}
+          >
             <IoClose />
           </button>
           <Navigation
@@ -57,6 +61,7 @@ export default function Sidebar() {
             onLinkClick={() => setIsOpen(false)}
           />
           <button
+            aria-label="Sprache wechseln"
             className={css.btnLang}
             onClick={() =>
               toast.loading(

@@ -65,7 +65,11 @@ const Header = () => {
               Zurück zur Startseite
             </button>
           ) : (
-            <button className={css.burger} onClick={() => setIsOpen(true)}>
+            <button
+              aria-label="Menü öffnen"
+              className={css.burger}
+              onClick={() => setIsOpen(true)}
+            >
               <IoMenu />
             </button>
           )
