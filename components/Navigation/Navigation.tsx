@@ -35,25 +35,6 @@ const Navigation = ({
   return (
     <nav className={`${css.nav} ${className}`} aria-label="Main Navigation">
       <ul className={css.navigation}>
-        {/* Startseite
-        <li className={css.navigationItem}>
-          <Link
-            onClick={(e) => {
-              e.preventDefault();
-              smoothScrollTo("hero");
-              onLinkClick?.();
-            }}
-            className={css.navigationLink}
-            href="#hero"
-          >
-            {isMobile ? (
-              <h4 className={css.navigationTitle}>Startseite</h4>
-            ) : (
-              <h5 className={css.navigationTitle}>Startseite</h5>
-            )}
-          </Link>
-        </li> */}
-        {/* Über uns */}
         <li className={css.navigationItem}>
           <Link
             onClick={(e) => {
@@ -65,24 +46,23 @@ const Navigation = ({
             href="#story"
           >
             {isMobile ? (
-              <h4 className={css.navigationTitle}>Über uns</h4>
+              <h3 className={css.navigationTitle}>Über uns</h3>
             ) : (
               <h5 className={css.navigationTitle}>Über uns</h5>
             )}
           </Link>
         </li>
-        {/* Unsere Teams */}
         <li className={css.navigationItem}>
           <Accordion.Root type="single" collapsible>
             <Accordion.Item value="teams">
               <Accordion.Trigger className={css.accordionTrigger}>
                 {isMobile ? (
-                  <h4 className={css.navigationTitle}>
+                  <h3 className={css.navigationTitle}>
                     Unsere Teams
                     <IoChevronDown
                       className={`${css.chevronBtn} ${chevronClassName}`}
                     />
-                  </h4>
+                  </h3>
                 ) : (
                   <h5 className={css.navigationTitle}>
                     Unsere Teams
@@ -95,7 +75,6 @@ const Navigation = ({
 
               <Accordion.Content className={css.accordionContent}>
                 <ul className={css.subNavigation}>
-                  {/* Mini Flames */}
                   <li className={css.subNavigationItem}>
                     <Link
                       href="#miniFlames"
@@ -107,10 +86,9 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h6>Mini Flames</h6>
+                      <h4>Mini Flames</h4>
                     </Link>
                   </li>
-                  {/* Fairies */}
                   <li className={css.subNavigationItem}>
                     <Link
                       href="#fairies"
@@ -122,10 +100,9 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h6>Fairies</h6>
+                      <h4>Fairies</h4>
                     </Link>
                   </li>
-                  {/* Fireflies */}
                   <li className={css.subNavigationItem}>
                     <Link
                       href="#fireflies"
@@ -137,10 +114,9 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h6>Fireflies</h6>
+                      <h4>Fireflies</h4>
                     </Link>
                   </li>
-                  {/* Firebirds */}
                   <li className={css.subNavigationItem}>
                     <Link
                       href="#firebirds"
@@ -152,10 +128,9 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h6>Firebirds</h6>
+                      <h4>Firebirds</h4>
                     </Link>
                   </li>
-                  {/* Forces */}
                   <li className={css.subNavigationItem}>
                     <Link
                       href="#forces"
@@ -167,10 +142,9 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h6>Forces</h6>
+                      <h4>Forces</h4>
                     </Link>
                   </li>
-                  {/* Firestorm */}
                   <li className={css.subNavigationItem}>
                     <Link
                       href="#firestorm"
@@ -182,7 +156,7 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h6>Firestorm</h6>
+                      <h4>Firestorm</h4>
                     </Link>
                   </li>
                 </ul>
@@ -190,15 +164,6 @@ const Navigation = ({
             </Accordion.Item>
           </Accordion.Root>
         </li>
-        {/* <li className={css.navigationItem}>
-          <Link className={css.navigationLink} href="/app/imressum/page.tsx">
-            {isMobile ? (
-              <h4 className={css.navigationTitle}>Impressum</h4>
-            ) : (
-              <h5 className={css.navigationTitle}>Impressum</h5>
-            )}
-          </Link>
-        </li> */}
       </ul>
     </nav>
   );
