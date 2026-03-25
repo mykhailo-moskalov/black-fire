@@ -30,11 +30,11 @@ export default function Sidebar() {
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
   }, [isOpen, setIsOpen]);
 
