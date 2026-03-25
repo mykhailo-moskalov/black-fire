@@ -188,10 +188,7 @@ const Team = () => {
         >
           <SwiperSlide
             className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
+            onClick={setLightboxIndex(swiperRef.current?.realIndex ?? 0)}
           >
             <Image
               width={60}
@@ -204,10 +201,7 @@ const Team = () => {
 
           <SwiperSlide
             className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
+            onClick={setLightboxIndex(swiperRef.current?.realIndex ?? 0)}
           >
             <Image
               width={60}
@@ -219,10 +213,7 @@ const Team = () => {
           </SwiperSlide>
           <SwiperSlide
             className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
+            onClick={setLightboxIndex(swiperRef.current?.realIndex ?? 0)}
           >
             <Image
               width={60}
@@ -234,10 +225,7 @@ const Team = () => {
           </SwiperSlide>
           <SwiperSlide
             className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
+            onClick={setLightboxIndex(swiperRef.current?.realIndex ?? 0)}
           >
             <Image
               width={60}
@@ -250,10 +238,7 @@ const Team = () => {
 
           <SwiperSlide
             className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
+            onClick={setLightboxIndex(swiperRef.current?.realIndex ?? 0)}
           >
             <Image
               width={60}
@@ -265,10 +250,7 @@ const Team = () => {
           </SwiperSlide>
           <SwiperSlide
             className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
+            onClick={setLightboxIndex(swiperRef.current?.realIndex ?? 0)}
           >
             <Image
               width={60}
@@ -281,10 +263,7 @@ const Team = () => {
 
           <SwiperSlide
             className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
+            onClick={setLightboxIndex(swiperRef.current?.realIndex ?? 0)}
           >
             <Image
               width={60}
