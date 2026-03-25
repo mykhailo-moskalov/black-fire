@@ -4,11 +4,19 @@
   left: 0;
 
   margin-bottom: 16px;
+
+  & .swiperSlide {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
 }
 
 .swiperSlide {
-  background-size: cover;
-  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  height: 502.5px;
 
   position: relative;
   top: 0;
@@ -20,7 +28,7 @@
   width: 100%;
 
   & .swiperSlide {
-    width: 25%;
+    width: 60px !important;
     height: 100%;
     opacity: 0.4;
     overflow: hidden;
@@ -63,6 +71,8 @@
 
 .slideDesc {
   opacity: 0.8;
+  color: var(--background);
+
   position: absolute;
   bottom: 4px;
   left: 8px;

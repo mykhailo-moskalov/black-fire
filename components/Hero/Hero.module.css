@@ -12,7 +12,7 @@
       rgba(43, 43, 43, 0.35) 0%,
       rgba(43, 43, 43, 0.85) 100%
     ),
-    url("/hero/hero-min.webp") no-repeat center/cover;
+    url("/hero/hero.jpg") no-repeat center/cover;
 
   position: relative;
 
@@ -23,7 +23,7 @@
         rgba(43, 43, 43, 0.35) 0%,
         rgba(43, 43, 43, 0.85) 100%
       ),
-      url("/hero/hero-min.webp") no-repeat center/cover; /* ! */
+      url("/hero/hero@2x.jpg") no-repeat center/cover;
   }
 }
 
