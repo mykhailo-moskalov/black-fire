@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import css from "./page.module.css";
 import Section from "@/components/Section/Section";
 import Container from "@/components/Container/Container";
 
@@ -32,12 +31,8 @@ const NotFound = () => {
   return (
     <Section>
       <Container>
-        <h1 className={css.title} style={{ marginBottom: 32 }}>
-          404 - Page not found
-        </h1>
-        <p className={css.description}>
-          Sorry, the page you are looking for does not exist.
-        </p>
+        <h1 style={{ marginBottom: 32 }}>404 - Page not found</h1>
+        <p>Sorry, the page you are looking for does not exist.</p>
         <p>You will be redirected to the homepage in a while.</p>
       </Container>
     </Section>

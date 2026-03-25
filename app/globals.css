@@ -12,17 +12,6 @@
   --header-height: 92px;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #001;
-    --foreground: #fff;
-  }
-
-  html {
-    color-scheme: dark;
-  }
-} */
-
 html {
   scroll-padding-top: var(--header-height);
 }
@@ -35,7 +24,7 @@ body {
 }
 
 body {
-  color: var(--background);
+  color: var(--foreground);
   background: var(--background);
   min-width: 320px;
 }

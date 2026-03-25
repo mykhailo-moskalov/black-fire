@@ -45,6 +45,7 @@ export default function Sidebar() {
       className={`${css.backdrop} ${isOpen ? css.show : css.hide}`}
       role="dialog"
       aria-modal="true"
+      aria-label="Navigationsmenü"
       onClick={handleBackdropClick}
     >
       <div className={`${css.sidebar} ${isOpen ? css.open : css.closed}`}>

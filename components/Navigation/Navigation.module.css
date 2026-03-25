@@ -1,4 +1,6 @@
 .navigation {
+  color: var(--background);
+
   display: flex;
   flex-direction: column;
   gap: 36px;
@@ -19,8 +21,6 @@
 
 .accordionTrigger {
   text-align: left;
-
-  color: inherit;
 
   transform: none !important;
 }

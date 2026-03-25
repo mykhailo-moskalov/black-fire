@@ -73,6 +73,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/hero/hero-min.webp"
+          fetchPriority="high"
+        />
+      </head>
       <body className={`${poppins.variable} ${poppins.className}`}>
         <MobileLayout>{children}</MobileLayout>
       </body>
