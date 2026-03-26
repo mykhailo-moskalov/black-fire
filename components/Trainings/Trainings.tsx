@@ -36,7 +36,7 @@ const Trainings = () => {
         >
           <SwiperSlide id="miniFlames" className={css.swiperSlide}>
             <h3>Mini Flames</h3>
-            <h4>Plannung:</h4>
+            <h4>Trainings:</h4>
             <p>
               Dienstag 16:30 bis 17:30 Uhr,
               <br />
@@ -47,7 +47,7 @@ const Trainings = () => {
           </SwiperSlide>
           <SwiperSlide id="fairies" className={css.swiperSlide}>
             <h3>Fairies</h3>
-            <h4>Plannung:</h4>
+            <h4>Trainings:</h4>
             <p>
               Montag 16:30 bis 18 Uhr,
               <br />
@@ -63,7 +63,7 @@ const Trainings = () => {
           </SwiperSlide>
           <SwiperSlide id="fireflies" className={css.swiperSlide}>
             <h3>Fireflies</h3>
-            <h4>Plannung:</h4>
+            <h4>Trainings:</h4>
             <p>
               Dienstag 17:00 bis 18:30 Uhr,
               <br />
@@ -84,7 +84,7 @@ const Trainings = () => {
           </SwiperSlide>
           <SwiperSlide id="firebirds" className={css.swiperSlide}>
             <h3>Firebirds</h3>
-            <h4>Plannung:</h4>
+            <h4>Trainings:</h4>
             <p>
               Montag 18:00 bis 19:30 Uhr,
               <br />

@@ -38,7 +38,7 @@ const Footer = () => {
               className={css.socialsLink}
             >
               <IoLocation />
-              Kindbergstraße 14 2331 VÖSENDORF
+              Ortsstraße 214/3/26 2331 VÖSENDORF
             </Link>
           </li>
           <li className={css.socialsItem}>
