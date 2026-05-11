@@ -10,7 +10,7 @@ export default function ScreenWidthWatcher() {
   useEffect(() => {
     const checkMobileSize = () => setIsMobile(window.innerWidth < 768);
     const checkTabletSize = () =>
-      setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1440);
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
     checkMobileSize();
     checkTabletSize();
 
