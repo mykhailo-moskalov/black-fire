@@ -10,10 +10,18 @@
   }
 }
 
+.navigationItem {
+  position: relative;
+}
+
 .navigationLink {
   display: inline-block;
 
   width: 100%;
+}
+
+.accordionItem {
+  position: relative;
 }
 
 .accordionTrigger {
@@ -22,25 +30,13 @@
   transform: none !important;
 }
 
-.accordionContent {
-  overflow: hidden;
-  will-change: height;
-}
-
-.accordionContent[data-state="open"] {
-  animation: slideDown 0.3s ease-in-out;
-}
-
-.accordionContent[data-state="closed"] {
-  animation: slideUp 0.3s ease-in-out;
-}
-
-.subNavigation {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 12px;
-  padding-left: 12px;
+.navigationTitle {
+  color: var(--background);
+  @media only screen and (min-width: 768px) {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .chevronBtn {
@@ -51,12 +47,51 @@
 
   width: 30px;
   height: 32px;
+
+  @media only screen and (min-width: 768px) {
+    margin-left: 8px;
+  }
 }
 .accordionTrigger[data-state="open"] .chevronBtn {
   transform: rotate(180deg);
 }
 .accordionTrigger[data-state="closed"] .chevronBtn {
   transform: rotate(0deg);
+}
+
+.accordionContent {
+  overflow: hidden;
+  will-change: height;
+
+  @media only screen and (min-width: 768px) {
+    position: fixed;
+    top: var(--header-height);
+    left: auto;
+    text-align: right;
+    background-color: var(--primary-color-op);
+    border-radius: 0 0 8px 8px;
+    padding: 16px;
+    z-index: 100;
+  }
+}
+.accordionContent[data-state="open"] {
+  animation: slideDown 0.3s ease-in-out;
+}
+.accordionContent[data-state="closed"] {
+  animation: slideUp 0.3s ease-in-out;
+}
+
+.subNavigation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  padding-left: 12px;
+
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @keyframes slideDown {

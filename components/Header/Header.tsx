@@ -13,6 +13,7 @@ import { usePathname, useRouter } from "next/navigation";
 const Header = () => {
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
   const isMobile = useWidthStore((state) => state.isMobile);
+  const isTablet = useWidthStore((state) => state.isTablet);
   const headerRef = useRef<HTMLElement>(null);
   const router = useRouter();
   const pathname = usePathname();
@@ -53,8 +54,8 @@ const Header = () => {
       ref={headerRef}
     >
       <Container className={css.headerContainer}>
-        <Logo width={40} height={(95 / 3) * 2} />
-
+        {isMobile && <Logo width={40} height={(95 / 3) * 2} />}
+        {isTablet && <Logo width={60} height={(142.5 / 3) * 2} />}
         {isMobile ? (
           isLegal ? (
             <button onClick={router.back} className={css.btn}>
