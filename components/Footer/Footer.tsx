@@ -23,12 +23,12 @@ const Footer = () => {
           </li>
           <li className={css.socialsItem}>
             <Link
-              href="tel:+4366442330063"
+              href="tel:+436644230063"
               target="_blank"
               className={css.socialsLink}
             >
               <FaPhoneAlt />
-              +4366442330063
+              +436644230063
             </Link>
           </li>
           <li className={css.socialsItem}>

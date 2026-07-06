@@ -9,42 +9,23 @@ const Sponsors = () => {
     <Section id="sponsors" className={css.sponsors}>
       <Container className={css.container}>
         <h2 className={css.heading}>
-          Unsere
+          Unser
           <br />
-          <span className="pad">Sponsoren</span>
+          <span className="pad">Sponsor</span>
         </h2>
-        <ul className={css.sponsorsList}>
-          <li className={css.sponsorsItem}>
-            <Link
-              href="https://gcclean.at/"
-              target="_blank"
-              className={css.sponsorsLink}
-            >
-              <Image
-                width={120}
-                height={60}
-                alt="GCClean Logo"
-                src="/sponsors/LOGO-GCClean.png"
-                className={css.gclean}
-              />
-            </Link>
-          </li>
-          <li className={css.sponsorsItem}>
-            <Link
-              href="https://renault-schwechat.at/"
-              target="_blank"
-              className={css.sponsorsLink}
-            >
-              <Image
-                width={190}
-                height={80}
-                alt="Renauld Zidek Logo"
-                src="/sponsors/LOGO-RZS.webp"
-                className={css.gclean}
-              />
-            </Link>
-          </li>
-        </ul>
+        <Link
+          href="https://renault-schwechat.at/"
+          target="_blank"
+          className={css.sponsorsLink}
+        >
+          <Image
+            width={190}
+            height={80}
+            alt="Renauld Zidek Logo"
+            src="/sponsors/LOGO-RZS.webp"
+            className={css.gclean}
+          />
+        </Link>
       </Container>
     </Section>
   );
