@@ -26,4 +26,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   min-width: 320px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
