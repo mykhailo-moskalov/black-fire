@@ -8,13 +8,11 @@ import { useWidthStore } from "@/lib/store/widthStore";
 
 const Footer = () => {
   const isMobile = useWidthStore((state) => state.isMobile);
-  const isTablet = useWidthStore((state) => state.isTablet);
 
   return (
     <footer id="footer" className={css.footer}>
       <Container className={css.container}>
-        {isMobile && <Logo width={60} height={95} />}
-        {isTablet && <Logo width={120} height={190} />}
+        <Logo width={isMobile ? 60 : 120} height={isMobile ? 95 : 190} />
         <div className={css.textDiv}>
           <ul className={css.socialsList}>
             <li className={css.socialsItem}>

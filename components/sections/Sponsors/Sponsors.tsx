@@ -9,7 +9,6 @@ import { useWidthStore } from "@/lib/store/widthStore";
 
 const Sponsors = () => {
   const isMobile = useWidthStore((state) => state.isMobile);
-  const isTablet = useWidthStore((state) => state.isTablet);
 
   return (
     <Section id="sponsors" className={css.sponsors}>
@@ -24,24 +23,13 @@ const Sponsors = () => {
           target="_blank"
           className={css.sponsorsLink}
         >
-          {isMobile && (
-            <Image
-              width={190}
-              height={80}
-              alt="Renauld Zidek Logo"
-              src="/sponsors/LOGO-RZS.webp"
-              className={css.gclean}
-            />
-          )}
-          {isTablet && (
-            <Image
-              width={380}
-              height={160}
-              alt="Renauld Zidek Logo"
-              src="/sponsors/LOGO-RZS.webp"
-              className={css.gclean}
-            />
-          )}
+          <Image
+            width={isMobile ? 190 : 380}
+            height={isMobile ? 80 : 160}
+            alt="Renauld Zidek Logo"
+            src="/sponsors/LOGO-RZS.webp"
+            className={css.gclean}
+          />
         </Link>
       </Container>
     </Section>
