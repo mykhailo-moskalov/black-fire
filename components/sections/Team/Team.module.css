@@ -77,4 +77,9 @@
   bottom: 4px;
   left: 8px;
   max-width: 223px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    max-width: 275px;
+  }
 }

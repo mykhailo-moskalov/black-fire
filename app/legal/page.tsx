@@ -39,7 +39,7 @@ export default function Legal() {
           <h2 className={css.heading}>Kontakt</h2>
           <ul className={css.list}>
             <li>
-              <p>Telefon: +4366442330063</p>
+              <p>Telefon: +436644230063</p>
             </li>
             <li>
               <p>E-Mail: office@blackfirecheer.at</p>

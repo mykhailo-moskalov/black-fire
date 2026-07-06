@@ -2,62 +2,70 @@ import Link from "next/link";
 import Container from "../../ui/Container/Container";
 import Logo from "../../ui/Logo/Logo";
 import css from "./Footer.module.css";
-import { IoLocation, IoLogoInstagram, IoMail } from "react-icons/io5";
+import { IoLocation, IoLogoInstagram, IoMail, IoOpen } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
+import { useWidthStore } from "@/lib/store/widthStore";
 
 const Footer = () => {
+  const isMobile = useWidthStore((state) => state.isMobile);
+  const isTablet = useWidthStore((state) => state.isTablet);
+
   return (
     <footer id="footer" className={css.footer}>
       <Container className={css.container}>
-        <Logo width={60} height={95} />
-        <ul className={css.socialsList}>
-          <li className={css.socialsItem}>
-            <Link
-              href="https://www.instagram.com/blackfirecheer/"
-              target="_blank"
-              className={css.socialsLink}
-            >
-              <IoLogoInstagram />
-              blackfirecheer
-            </Link>
-          </li>
-          <li className={css.socialsItem}>
-            <Link
-              href="tel:+436644230063"
-              target="_blank"
-              className={css.socialsLink}
-            >
-              <FaPhoneAlt />
-              +436644230063
-            </Link>
-          </li>
-          <li className={css.socialsItem}>
-            <Link
-              href="https://maps.app.goo.gl/LHXVDDkNTqQy34UD6"
-              target="_blank"
-              className={css.socialsLink}
-            >
-              <IoLocation />
-              Ortsstraße 214/3/26 2331 VÖSENDORF
-            </Link>
-          </li>
-          <li className={css.socialsItem}>
-            <Link
-              href="mailto:office@blackfirecheer.at"
-              target="_blank"
-              className={css.socialsLink}
-            >
-              <IoMail />
-              office@blackfirecheer.at
-            </Link>
-          </li>
-        </ul>
-        <Link href="/legal" className={css.impressumLink}>
-          Impressum
-        </Link>
-        <p className={css.copyright}>
-          &copy; {new Date().getFullYear()} Verein BlackFire Cheer&Dance
-        </p>
+        {isMobile && <Logo width={60} height={95} />}
+        {isTablet && <Logo width={120} height={190} />}
+        <div className={css.textDiv}>
+          <ul className={css.socialsList}>
+            <li className={css.socialsItem}>
+              <Link
+                href="https://www.instagram.com/blackfirecheer/"
+                target="_blank"
+                className={css.socialsLink}
+              >
+                <IoLogoInstagram />
+                blackfirecheer
+              </Link>
+            </li>
+            <li className={css.socialsItem}>
+              <Link
+                href="tel:+436644230063"
+                target="_blank"
+                className={css.socialsLink}
+              >
+                <FaPhoneAlt />
+                +436644230063
+              </Link>
+            </li>
+            <li className={css.socialsItem}>
+              <Link
+                href="https://maps.app.goo.gl/LHXVDDkNTqQy34UD6"
+                target="_blank"
+                className={css.socialsLink}
+              >
+                <IoLocation />
+                Ortsstraße 214/3/26 2331 VÖSENDORF
+              </Link>
+            </li>
+            <li className={css.socialsItem}>
+              <Link
+                href="mailto:office@blackfirecheer.at"
+                target="_blank"
+                className={css.socialsLink}
+              >
+                <IoMail />
+                office@blackfirecheer.at
+              </Link>
+            </li>
+          </ul>
+          <Link href="/legal" className={css.legalLink}>
+            <IoOpen />
+            Impressum
+          </Link>
+          <p className={css.copyright}>
+            &copy; {new Date().getFullYear()} Verein BlackFire Cheer&Dance
+          </p>{" "}
+        </div>
       </Container>
     </footer>
   );

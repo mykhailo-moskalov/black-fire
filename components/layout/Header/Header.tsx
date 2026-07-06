@@ -54,23 +54,20 @@ const Header = () => {
       ref={headerRef}
     >
       <Container className={css.headerContainer}>
-        {isMobile && <Logo width={40} height={(95 / 3) * 2} />}
-        {isTablet && <Logo width={60} height={(142.5 / 3) * 2} />}
-        {isMobile ? (
-          isLegal ? (
-            <button onClick={router.back} className={css.btn}>
-              <IoArrowBack />
-              Zurück zur Startseite
-            </button>
-          ) : (
-            <button
-              aria-label="Menü öffnen"
-              className={css.burger}
-              onClick={() => setIsOpen(true)}
-            >
-              <IoMenu />
-            </button>
-          )
+        <Logo width={40} height={(95 / 3) * 2} />
+        {isLegal && (isMobile || isTablet) ? (
+          <button onClick={router.back} className={css.btn}>
+            <IoArrowBack />
+            Zurück zur Startseite
+          </button>
+        ) : isMobile ? (
+          <button
+            aria-label="Menü öffnen"
+            className={css.burger}
+            onClick={() => setIsOpen(true)}
+          >
+            <IoMenu />
+          </button>
         ) : (
           <Navigation className={css.nav} />
         )}

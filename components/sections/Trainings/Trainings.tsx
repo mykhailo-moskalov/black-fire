@@ -24,12 +24,11 @@ const Trainings = () => {
         <Swiper
           onSwiper={setSwiper}
           spaceBetween={50}
-          slidesPerView={1}
+          slidesPerView={"auto"}
           modules={[Pagination, Autoplay]}
           autoplay={{ delay: 3000 }}
           pagination={{ dynamicBullets: true, clickable: true }}
           loop={true}
-          centeredSlides={true}
           autoHeight={false}
           grabCursor={true}
           className={css.swiper}
