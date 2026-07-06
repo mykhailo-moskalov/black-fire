@@ -1,8 +1,8 @@
 "use client";
 
 import { IoArrowBack, IoMenu } from "react-icons/io5";
-import Logo from "../Logo/Logo";
-import Container from "../Container/Container";
+import Logo from "../../ui/Logo/Logo";
+import Container from "../../ui/Container/Container";
 import Navigation from "../Navigation/Navigation";
 import css from "./Header.module.css";
 import { useSidebarStore } from "@/lib/store/sidebarStore";

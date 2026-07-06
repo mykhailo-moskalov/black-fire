@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Container from "../Container/Container";
+import Container from "../../ui/Container/Container";
 import css from "./Hero.module.css";
-import Section from "../Section/Section";
+import Section from "../../ui/Section/Section";
 import { useEffect, useRef } from "react";
 import { smoothScrollTo } from "@/lib/utils/smoothScroll";
 

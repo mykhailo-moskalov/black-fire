@@ -1,6 +1,6 @@
 import { IoRibbon } from "react-icons/io5";
-import Container from "../Container/Container";
-import Section from "../Section/Section";
+import Container from "../../ui/Container/Container";
+import Section from "../../ui/Section/Section";
 import css from "./Story.module.css";
 
 const Story = () => {

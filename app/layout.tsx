@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 
 import "./globals.css";
 
-import MobileLayout from "@/components/MobileLayout/MobileLayout";
+import MobileLayout from "@/components/layout/MobileLayout/MobileLayout";
 
 const poppins = Poppins({
   weight: ["400", "700"],

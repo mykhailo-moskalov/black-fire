@@ -1,9 +1,9 @@
 "use client";
 
-import Section from "@/components/Section/Section";
-import Container from "@/components/Container/Container";
+import Section from "@/components/ui/Section/Section";
+import Container from "@/components/ui/Container/Container";
 import css from "./Impressum.module.css";
-import BackToTop from "@/components/BackToTop/BackToTop";
+import BackToTop from "@/components/ui/BackToTop/BackToTop";
 
 export default function Legal() {
   return (

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Container from "../Container/Container";
-import Logo from "../Logo/Logo";
+import Container from "../../ui/Container/Container";
+import Logo from "../../ui/Logo/Logo";
 import css from "./Footer.module.css";
 import { IoLocation, IoLogoInstagram, IoMail } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";

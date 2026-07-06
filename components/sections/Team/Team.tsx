@@ -1,7 +1,7 @@
 "use client";
 
-import Container from "../Container/Container";
-import Section from "../Section/Section";
+import Container from "../../ui/Container/Container";
+import Section from "../../ui/Section/Section";
 import css from "./Team.module.css";
 import Image from "next/image";
 import { useState, useRef } from "react";
@@ -186,9 +186,7 @@ const Team = () => {
           modules={[FreeMode, Navigation, Thumbs]}
           className={css.swiperBottom}
         >
-          <SwiperSlide
-            className={css.swiperSlide}
-          >
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={90}
@@ -198,9 +196,7 @@ const Team = () => {
             />
           </SwiperSlide>
 
-          <SwiperSlide
-            className={css.swiperSlide}
-          >
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={90}
@@ -209,9 +205,7 @@ const Team = () => {
               loading="lazy"
             />
           </SwiperSlide>
-          <SwiperSlide
-            className={css.swiperSlide}
-          >
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={40}
@@ -220,9 +214,7 @@ const Team = () => {
               loading="lazy"
             />
           </SwiperSlide>
-          <SwiperSlide
-            className={css.swiperSlide}
-          >
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={40}
@@ -232,9 +224,7 @@ const Team = () => {
             />
           </SwiperSlide>
 
-          <SwiperSlide
-            className={css.swiperSlide}
-          >
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={90}
@@ -243,9 +233,7 @@ const Team = () => {
               loading="lazy"
             />
           </SwiperSlide>
-          <SwiperSlide
-            className={css.swiperSlide}
-          >
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={40}
@@ -255,9 +243,7 @@ const Team = () => {
             />
           </SwiperSlide>
 
-          <SwiperSlide
-            className={css.swiperSlide}
-          >
+          <SwiperSlide className={css.swiperSlide}>
             <Image
               width={60}
               height={40}

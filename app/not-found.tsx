@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import Section from "@/components/Section/Section";
-import Container from "@/components/Container/Container";
+import Section from "@/components/ui/Section/Section";
+import Container from "@/components/ui/Container/Container";
 
 export const metadata: Metadata = {
   title: "Non-existent page",

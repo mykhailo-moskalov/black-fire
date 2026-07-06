@@ -9,7 +9,7 @@ import { useWidthStore } from "@/lib/store/widthStore";
 import { useSidebarStore } from "@/lib/store/sidebarStore";
 import { IoClose, IoGlobe } from "react-icons/io5";
 import toast from "react-hot-toast";
-import Container from "../Container/Container";
+import Container from "../../ui/Container/Container";
 import { usePathname } from "next/navigation";
 
 export default function Sidebar() {

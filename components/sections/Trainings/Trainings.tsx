@@ -1,7 +1,7 @@
 "use client";
 
-import Container from "../Container/Container";
-import Section from "../Section/Section";
+import Container from "../../ui/Container/Container";
+import Section from "../../ui/Section/Section";
 import css from "./Trainings.module.css";
 import { useTrainingsStore } from "@/lib/store/trainingsStore";
 
