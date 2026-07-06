@@ -115,7 +115,7 @@ const Trainings = () => {
           </SwiperSlide>
         </Swiper>
         <p className={css.hint}>
-          Swipe to see more <IoArrowForward />
+          Wische, um mehr zu sehen <IoArrowForward />
         </p>
       </Container>
     </Section>
