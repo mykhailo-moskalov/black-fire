@@ -17,6 +17,7 @@ import Lightbox from "yet-another-react-lightbox";
 import { Captions, Zoom } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
+import { useWidthStore } from "@/lib/store/widthStore";
 
 const Team = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
@@ -24,6 +25,12 @@ const Team = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const isMobile = useWidthStore((state) => state.isMobile);
+  const isTablet = useWidthStore((state) => state.isTablet);
+
+  const imgWidth = isMobile || isTablet ? 335 : 468;
+  const imgHeight = isMobile || isTablet ? 502.5 : 702;
+  const imgWidthHorizontal = imgHeight * 1.5;
 
   return (
     <Section id="team" className={css.team}>
@@ -42,123 +49,27 @@ const Team = () => {
           thumbs={{ swiper: thumbsSwiper }}
           className={css.swiper}
         >
-          <SwiperSlide
-            className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
-          >
-            <Image
-              width={335}
-              height={502.5}
-              alt="Gründerinnen Bettina Beneda & Anna Ableidinger"
-              src="/team/founders.jpg"
-              loading="lazy"
-            />
-            <p className={css.slideDesc}>
-              Gründerinnen Bettina Beneda &amp; Anna Ableidinger
-            </p>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
-          >
-            <Image
-              width={335}
-              height={502.5}
-              alt="Fairies"
-              src="/team/fairies.jpg"
-              loading="lazy"
-            />
-            <p className={css.slideDesc}>Fairies</p>
-          </SwiperSlide>
-          <SwiperSlide
-            className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
-          >
-            <Image
-              width={335}
-              height={502.5}
-              alt="Fireflies"
-              src="/team/fireflies.jpg"
-              loading="lazy"
-            />
-            <p className={css.slideDesc}>Fireflies</p>
-          </SwiperSlide>
-          <SwiperSlide
-            className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
-          >
-            <Image
-              width={335}
-              height={502.5}
-              alt="Firebirds"
-              src="/team/firebirds.jpg"
-              loading="lazy"
-            />
-            <p className={css.slideDesc}>Firebirds</p>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
-          >
-            <Image
-              width={335}
-              height={502.5}
-              alt="Meisterschaft 'All-Level'"
-              src="/team/all-level.jpg"
-              loading="lazy"
-            />
-            <p className={css.slideDesc}>Meisterschaft &quot;All-Level&quot;</p>
-          </SwiperSlide>
-          <SwiperSlide
-            className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
-          >
-            <Image
-              width={335}
-              height={502.5}
-              alt="United Cheer Cup '25"
-              src="/team/united-cheer-cup.jpg"
-              loading="lazy"
-            />
-            <p className={css.slideDesc}>United Cheer Cup &apos;25</p>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className={css.swiperSlide}
-            onClick={() => {
-              setLightboxIndex(swiperRef.current?.realIndex ?? 0);
-              setLightboxOpen(true);
-            }}
-          >
-            <Image
-              width={335}
-              height={502.5}
-              alt="Die schreiende Anna"
-              src="/team/screaming-anna.jpg"
-              loading="lazy"
-            />
-          </SwiperSlide>
-
+          {slides.map((slide) => (
+            <SwiperSlide
+              key={slide.src}
+              className={css.swiperSlide}
+              onClick={() => {
+                setLightboxIndex(swiperRef.current?.realIndex ?? 0);
+                setLightboxOpen(true);
+              }}
+            >
+              <Image
+                width={slide.horizontal ? imgWidthHorizontal : imgWidth}
+                height={imgHeight}
+                alt={slide.description ?? ""}
+                src={slide.thumbnail}
+                loading="lazy"
+              />
+              {slide.description && (
+                <p className={css.slideDesc}>{slide.description}</p>
+              )}
+            </SwiperSlide>
+          ))}
           <div className={css.navBox}>
             <button
               aria-label="Vorheriges Foto"
@@ -186,79 +97,24 @@ const Team = () => {
           modules={[FreeMode, Navigation, Thumbs]}
           className={css.swiperBottom}
         >
-          <SwiperSlide className={css.swiperSlide}>
-            <Image
-              width={60}
-              height={90}
-              alt="Gründerinnen Bettina Beneda & Anna Ableidinger"
-              src="/team/min/founders.jpg"
-              loading="lazy"
-            />
-          </SwiperSlide>
-
-          <SwiperSlide className={css.swiperSlide}>
-            <Image
-              width={60}
-              height={90}
-              alt="Fairies"
-              src="/team/min/fairies.jpg"
-              loading="lazy"
-            />
-          </SwiperSlide>
-          <SwiperSlide className={css.swiperSlide}>
-            <Image
-              width={60}
-              height={40}
-              alt="Fireflies"
-              src="/team/min/fireflies.jpg"
-              loading="lazy"
-            />
-          </SwiperSlide>
-          <SwiperSlide className={css.swiperSlide}>
-            <Image
-              width={60}
-              height={40}
-              alt="Firebirds"
-              src="/team/min/firebirds.jpg"
-              loading="lazy"
-            />
-          </SwiperSlide>
-
-          <SwiperSlide className={css.swiperSlide}>
-            <Image
-              width={60}
-              height={90}
-              alt="Meisterschaft 'All-Level'"
-              src="/team/min/all-level.jpg"
-              loading="lazy"
-            />
-          </SwiperSlide>
-          <SwiperSlide className={css.swiperSlide}>
-            <Image
-              width={60}
-              height={40}
-              alt="United Cheer Cup '25"
-              src="/team/min/united-cheer-cup.jpg"
-              loading="lazy"
-            />
-          </SwiperSlide>
-
-          <SwiperSlide className={css.swiperSlide}>
-            <Image
-              width={60}
-              height={40}
-              alt="Die schreiende Anna"
-              src="/team/min/screaming-anna.jpg"
-              loading="lazy"
-            />
-          </SwiperSlide>
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.mini} className={css.swiperSlide}>
+              <Image
+                width={60}
+                height={slide.horizontal ? 40 : 90}
+                alt={slide.description ?? ""}
+                src={slide.mini}
+                loading="lazy"
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </Container>
 
       <Lightbox
         open={lightboxOpen}
         close={() => setLightboxOpen(false)}
-        slides={slides}
+        slides={slides.map((s) => ({ src: s.src, description: s.description }))}
         index={lightboxIndex}
         plugins={[Captions, Zoom]}
         on={{

@@ -23,12 +23,14 @@ const Header = () => {
 
   useEffect(() => {
     const updateHeight = () => {
-      if (headerRef.current) {
-        document.documentElement.style.setProperty(
-          "--header-height",
-          `${Math.ceil(headerRef.current.offsetHeight)}px`,
-        );
-      }
+      requestAnimationFrame(() => {
+        if (headerRef.current) {
+          document.documentElement.style.setProperty(
+            "--header-height",
+            `${Math.ceil(headerRef.current.offsetHeight)}px`,
+          );
+        }
+      });
     };
 
     if (isLegal) return;

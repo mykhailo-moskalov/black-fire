@@ -7,17 +7,19 @@
 
   color: var(--background);
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(43, 43, 43, 0.35) 0%,
-      rgba(43, 43, 43, 0.85) 100%
-    ),
-    url("/hero/hero.jpg") no-repeat center/cover;
-
   position: relative;
 
-  @media screen and (min-resolution: 2x) {
+  @media screen and (max-width: 767px) {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(43, 43, 43, 0.35) 0%,
+        rgba(43, 43, 43, 0.85) 100%
+      ),
+      url("/hero/hero.jpg") no-repeat center/cover;
+  }
+
+  @media screen and (max-width: 767px) and (min-resolution: 2x) {
     background:
       linear-gradient(
         90deg,
@@ -37,16 +39,6 @@
         rgba(43, 43, 43, 0.85) 100%
       ),
       url("/hero/hero-tab.jpg") no-repeat center/cover;
-
-    @media screen and (min-resolution: 2x) {
-      background:
-        linear-gradient(
-          90deg,
-          rgba(43, 43, 43, 0.35) 0%,
-          rgba(43, 43, 43, 0.85) 100%
-        ),
-        url("/hero/hero-tab@2x.jpg") no-repeat center/cover;
-    }
   }
 
   @media screen and (min-width: 1440px) {
@@ -58,16 +50,6 @@
         rgba(43, 43, 43, 0.85) 100%
       ),
       url("/hero/hero-desk.jpg") no-repeat center/cover;
-
-    @media screen and (min-resolution: 2x) {
-      background:
-        linear-gradient(
-          90deg,
-          rgba(43, 43, 43, 0.35) 0%,
-          rgba(43, 43, 43, 0.85) 100%
-        ),
-        url("/hero/hero-desk@2x.jpg") no-repeat center/cover;
-    }
   }
 }
 
@@ -79,8 +61,6 @@
 
 .heading {
   text-transform: uppercase;
-
-  margin-bottom: 48px;
 }
 
 .subHeading {
@@ -91,6 +71,14 @@
   line-height: 120%;
   font-weight: bold;
   max-width: 300px;
+  margin-top: 48px;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 80px;
+  }
+  @media only screen and (min-width: 1440px) {
+    font-size: 36px;
+  }
 }
 
 .link {

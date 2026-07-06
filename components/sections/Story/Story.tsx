@@ -44,7 +44,6 @@ const Story = () => {
               Wir sind stolz auf unsere Athlet:innen, unseren Teamgeist und die
               Energie, die Black Fire Cheer and Dance ausmacht.
             </p>
-            <IoRibbon className={css.icon} />
           </li>
 
           <li className={css.storyItem}>

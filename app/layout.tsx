@@ -80,6 +80,21 @@ export default function RootLayout({
           href="/hero/hero.jpg"
           imageSrcSet="/hero/hero.jpg 1x, /hero/hero@2x.jpg 2x"
           fetchPriority="high"
+          media="(max-width: 767px)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/hero/hero-tab.jpg"
+          fetchPriority="high"
+          media="(min-width: 768px) and (max-width: 1439px)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/hero/hero-desk.jpg"
+          fetchPriority="high"
+          media="(min-width: 1440px)"
         />
       </head>
       <body className={`${poppins.variable} ${poppins.className}`}>

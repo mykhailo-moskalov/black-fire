@@ -1,8 +1,13 @@
 .footer {
   padding: 24px 0;
+  width: 100%;
 
   color: var(--background);
   background-color: var(--foreground);
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .container {
@@ -49,7 +54,7 @@
   font-size: 12px;
   opacity: 0.6;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     font-size: 14px;
   }
 }

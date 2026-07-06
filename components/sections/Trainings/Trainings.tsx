@@ -23,7 +23,7 @@ const Trainings = () => {
         </h2>
         <Swiper
           onSwiper={setSwiper}
-          spaceBetween={50}
+          spaceBetween={32}
           slidesPerView={"auto"}
           modules={[Pagination, Autoplay]}
           autoplay={{ delay: 3000 }}

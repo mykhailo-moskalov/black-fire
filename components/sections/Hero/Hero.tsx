@@ -12,12 +12,14 @@ const Hero = () => {
 
   useEffect(() => {
     const updateHeight = () => {
-      if (bottomDivRef.current) {
-        document.documentElement.style.setProperty(
-          "--bottom-div-height",
-          `${Math.ceil(bottomDivRef.current.offsetHeight)}px`,
-        );
-      }
+      requestAnimationFrame(() => {
+        if (bottomDivRef.current) {
+          document.documentElement.style.setProperty(
+            "--bottom-div-height",
+            `${Math.ceil(bottomDivRef.current.offsetHeight)}px`,
+          );
+        }
+      });
     };
 
     updateHeight();
