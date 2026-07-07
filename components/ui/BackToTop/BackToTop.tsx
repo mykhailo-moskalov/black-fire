@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import { IoChevronUp } from "react-icons/io5";
 import { smoothScrollTo } from "@/lib/utils/smoothScroll";
 import css from "./BackToTop.module.css";
+import { useTranslations } from "next-intl";
 
 export default function BackToTop() {
   const [visible, setVisible] = useState(false);
+  const t = useTranslations("aria");
 
   useEffect(() => {
     const handleScroll = () => setVisible(window.scrollY > 0);
@@ -16,7 +18,7 @@ export default function BackToTop() {
 
   return (
     <button
-      aria-label="Zurück nach oben"
+      aria-label={t("backToTop")}
       className={`${css.btn} ${visible ? css.visible : ""}`}
       onClick={() => smoothScrollTo("hero")}
     >

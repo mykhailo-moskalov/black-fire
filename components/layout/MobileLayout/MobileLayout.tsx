@@ -8,7 +8,6 @@ import { useWidthStore } from "@/lib/store/widthStore";
 import { useSidebarStore } from "@/lib/store/sidebarStore";
 import ScreenWidthWatcher from "../ScreenWidthWatcher/ScreenWidthWatcher";
 import { Toaster } from "react-hot-toast";
-import { relative } from "path";
 
 export default function MobileLayout({ children }: { children: ReactNode }) {
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);

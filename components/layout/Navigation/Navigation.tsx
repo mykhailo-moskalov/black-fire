@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import css from "./Navigation.module.css";
 
 import * as Accordion from "@radix-ui/react-accordion";
@@ -9,6 +9,7 @@ import { IoChevronDown } from "react-icons/io5";
 import { smoothScrollTo } from "@/lib/utils/smoothScroll";
 import { useTrainingsStore } from "@/lib/store/trainingsStore";
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface NavigationProps {
   className?: string;
@@ -34,6 +35,9 @@ const Navigation = ({
     "forces",
     "firestorm",
   ];
+  const t = useTranslations("nav");
+  const ta = useTranslations("aria");
+  const tt = useTranslations("trainings.teams");
 
   useEffect(() => {
     const updateWidth = () => {
@@ -66,7 +70,10 @@ const Navigation = ({
   }, []);
 
   return (
-    <nav className={`${css.nav} ${className}`} aria-label="Main Navigation">
+    <nav
+      className={`${css.nav} ${className}`}
+      aria-label={ta("mainNavigation")}
+    >
       <ul className={css.navigation}>
         <li className={css.navigationItem}>
           <Link
@@ -78,7 +85,7 @@ const Navigation = ({
             className={css.navigationLink}
             href="#story"
           >
-            <h3 className={css.navigationTitle}>Über uns</h3>
+            <h3 className={css.navigationTitle}>{t("about")}</h3>
           </Link>
         </li>
         <li ref={accordionRef} className={css.navigationItem}>
@@ -94,7 +101,7 @@ const Navigation = ({
                 className={css.accordionTrigger}
               >
                 <h3 className={css.navigationTitle}>
-                  Unsere Teams
+                  {t("teams")}
                   <IoChevronDown
                     className={`${css.chevronBtn} ${chevronClassName}`}
                   />
@@ -117,7 +124,7 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h4>Mini Flames</h4>
+                      <h4>{tt("miniFlames.name")}</h4>
                     </Link>
                   </li>
                   <li className={css.subNavigationItem}>
@@ -131,7 +138,7 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h4>Fairies</h4>
+                      <h4>{tt("fairies.name")}</h4>
                     </Link>
                   </li>
                   <li className={css.subNavigationItem}>
@@ -145,7 +152,7 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h4>Fireflies</h4>
+                      <h4>{tt("fireflies.name")}</h4>
                     </Link>
                   </li>
                   <li className={css.subNavigationItem}>
@@ -159,7 +166,7 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h4>Firebirds</h4>
+                      <h4>{tt("firebirds.name")}</h4>
                     </Link>
                   </li>
                   <li className={css.subNavigationItem}>
@@ -173,7 +180,7 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h4>Forces</h4>
+                      <h4>{tt("forces.name")}</h4>
                     </Link>
                   </li>
                   <li className={css.subNavigationItem}>
@@ -187,7 +194,7 @@ const Navigation = ({
                       }}
                       className={css.subLink}
                     >
-                      <h4>Firestorm</h4>
+                      <h4>{tt("firestorm.name")}</h4>
                     </Link>
                   </li>
                 </ul>

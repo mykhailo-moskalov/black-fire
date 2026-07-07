@@ -8,7 +8,9 @@ import css from "./Header.module.css";
 import { useSidebarStore } from "@/lib/store/sidebarStore";
 import { useWidthStore } from "@/lib/store/widthStore";
 import { useEffect, useRef, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/lib/navigation";
+import { useTranslations } from "next-intl";
+import LangSwitcher from "@/components/ui/LangSwitcher/LangSwitcher";
 
 const Header = () => {
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
@@ -16,6 +18,8 @@ const Header = () => {
   const headerRef = useRef<HTMLElement>(null);
   const router = useRouter();
   const pathname = usePathname();
+  const t = useTranslations("header");
+  const ta = useTranslations("aria");
 
   const isLegal = pathname === "/legal";
 
@@ -33,13 +37,14 @@ const Header = () => {
       });
     };
 
-    if (isLegal) return;
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+
+    if (isLegal)
+      return () => window.removeEventListener("resize", updateHeight);
 
     const handleScroll = () => setScrolled(window.scrollY >= 300);
 
-    updateHeight();
-
-    window.addEventListener("resize", updateHeight);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -55,15 +60,19 @@ const Header = () => {
       ref={headerRef}
     >
       <Container className={css.headerContainer}>
-        <Logo width={40} height={(95 / 3) * 2} />
+        <Logo width={40} />
         {isLegal ? (
-          <button onClick={router.back} className={css.btn}>
+          <button
+            aria-label={ta("goBack")}
+            onClick={router.back}
+            className={css.backBtn}
+          >
             <IoArrowBack />
-            Zurück zur Startseite
+            {t("goBack")}
           </button>
         ) : isMobile ? (
           <button
-            aria-label="Menü öffnen"
+            aria-label={ta("openMenu")}
             className={css.burger}
             onClick={() => setIsOpen(true)}
           >
@@ -72,6 +81,7 @@ const Header = () => {
         ) : (
           <Navigation className={css.nav} />
         )}
+        {isMobile ? "" : <LangSwitcher className={css.btnLang} />}
       </Container>
     </header>
   );

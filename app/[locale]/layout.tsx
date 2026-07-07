@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 
-import "./globals.css";
+import "../globals.css";
 
 import MobileLayout from "@/components/layout/MobileLayout/MobileLayout";
 
@@ -11,6 +13,12 @@ const poppins = Poppins({
   display: "swap",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#000001",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "Black Fire",
@@ -48,9 +56,6 @@ export const metadata: Metadata = {
     icon: "/icon0.svg",
     apple: "/apple-icon.png",
   },
-  manifest: "/manifest",
-  themeColor: "#000001",
-  viewport: "width=device-width, initial-scale=1",
   robots: {
     index: true,
     follow: true,
@@ -66,13 +71,17 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  const messages = await getMessages();
   return (
-    <html lang="de">
+    <html lang={locale}>
       <head>
         <link
           rel="preload"
@@ -98,7 +107,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} ${poppins.className}`}>
-        <MobileLayout>{children}</MobileLayout>
+        <NextIntlClientProvider messages={messages}>
+          <MobileLayout>{children}</MobileLayout>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

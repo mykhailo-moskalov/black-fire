@@ -67,8 +67,11 @@
 }
 
 .btnLang {
-  width: 32px;
-  height: 32px;
-
   margin-top: auto;
+
+  &:hover,
+  &:focus {
+    background-color: none;
+    transform: scale(1.15);
+  }
 }

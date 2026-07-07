@@ -22,9 +22,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+  }
 }
 
-.btn {
+.nav {
+  @media screen and (min-width: 768px) {
+    padding-right: 68px;
+  }
+}
+
+.backBtn {
   display: flex;
   gap: 4px;
 
@@ -33,6 +43,16 @@
   & svg {
     height: 1lh;
     width: 1lh;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-20%);
+    box-shadow: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-right: 68px;
   }
 }
 
@@ -48,4 +68,16 @@
 
 .burger svg {
   color: var(--background);
+}
+
+.btnLang {
+  position: absolute;
+  right: 100;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover,
+  &:focus {
+    transform: translateY(-50%) scale(1.1);
+  }
 }

@@ -4,22 +4,25 @@ import Section from "@/components/ui/Section/Section";
 import Container from "@/components/ui/Container/Container";
 import css from "./Impressum.module.css";
 import BackToTop from "@/components/ui/BackToTop/BackToTop";
+import { Link } from "@/lib/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Legal() {
+  const t = useTranslations("legal");
   return (
     <main className={css.main}>
       <Section className={css.section}>
         <Container className={css.container}>
-          <h1>Impressum</h1>
+          <h1>{t("heading")}</h1>
         </Container>
       </Section>
 
       <Section className={css.section}>
         <Container className={css.container}>
-          <h2 className={css.heading}>Angaben gemäß § 5 ECG</h2>
+          <h2 className={css.heading}>{t("ecg.heading")}</h2>
           <ul className={css.list}>
             <li>
-              <p>Verein BlackFire Cheer&Dance</p>
+              <p>{t("ecg.name")}</p>
             </li>
             <li>
               <p>Ortsstraße 214/3/26</p>
@@ -28,7 +31,7 @@ export default function Legal() {
               <p>2331 Vösendorf</p>
             </li>
             <li>
-              <p>Österreich</p>
+              <p>{t("ecg.country")}</p>
             </li>
           </ul>
         </Container>
@@ -36,13 +39,21 @@ export default function Legal() {
 
       <Section className={css.section}>
         <Container className={css.container}>
-          <h2 className={css.heading}>Kontakt</h2>
+          <h2 className={css.heading}>{t("contact.heading")}</h2>
           <ul className={css.list}>
             <li>
-              <p>Telefon: +436644230063</p>
+              <p>
+                {t("contact.phone")}
+                <Link href="tel:+436644230063">+436644230063</Link>
+              </p>
             </li>
             <li>
-              <p>E-Mail: office@blackfirecheer.at</p>
+              <p>
+                E-Mail:{" "}
+                <Link href="mailto:office@blackfirecheer.at">
+                  office@blackfirecheer.at
+                </Link>
+              </p>
             </li>
           </ul>
         </Container>
@@ -50,31 +61,22 @@ export default function Legal() {
 
       <Section className={css.section}>
         <Container className={css.container}>
-          <h2 className={css.heading}>Vereinsregister</h2>
-          <p>Vereinsregisternummer: 1092922401</p>
+          <h2 className={css.heading}>{t("register.heading")}</h2>
+          <p>{t("register.text")}</p>
         </Container>
       </Section>
 
       <Section className={css.section}>
         <Container className={css.container}>
-          <h2 className={css.heading}>Haftungsausschluss</h2>
-          <p>
-            Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für
-            die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können
-            wir jedoch keine Gewähr übernehmen.
-          </p>
+          <h2 className={css.heading}>{t("liability.heading")}</h2>
+          <p>{t("liability.text")}</p>
         </Container>
       </Section>
 
       <Section className={css.section}>
         <Container className={css.container}>
-          <h2 className={css.heading}>Datenschutz</h2>
-          <p>
-            Die Nutzung unserer Website ist in der Regel ohne Angabe
-            personenbezogener Daten möglich. Soweit auf unseren Seiten
-            personenbezogene Daten erhoben werden, erfolgt dies auf freiwilliger
-            Basis.
-          </p>
+          <h2 className={css.heading}>{t("privacyPolicy.heading")}</h2>
+          <p>{t("privacyPolicy.text")}</p>
         </Container>
       </Section>
       <BackToTop />

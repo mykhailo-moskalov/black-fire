@@ -7,16 +7,18 @@ import Navigation from "../Navigation/Navigation";
 import { useEffect } from "react";
 import { useWidthStore } from "@/lib/store/widthStore";
 import { useSidebarStore } from "@/lib/store/sidebarStore";
-import { IoClose, IoGlobe } from "react-icons/io5";
-import toast from "react-hot-toast";
+import { IoClose } from "react-icons/io5";
 import Container from "../../ui/Container/Container";
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/lib/navigation";
+import LangSwitcher from "@/components/ui/LangSwitcher/LangSwitcher";
+import { useTranslations } from "next-intl";
 
 export default function Sidebar() {
   const isMobile = useWidthStore((state) => state.isMobile);
   const isOpen = useSidebarStore((state) => state.isOpen);
   const setIsOpen = useSidebarStore((state) => state.setIsOpen);
   const pathname = usePathname();
+  const t = useTranslations("aria");
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) setIsOpen(false);
@@ -45,13 +47,13 @@ export default function Sidebar() {
       className={`${css.backdrop} ${isOpen ? css.show : css.hide}`}
       role="dialog"
       aria-modal="true"
-      aria-label="Navigationsmenü"
+      aria-label={t("navigation")}
       onClick={handleBackdropClick}
     >
       <div className={`${css.sidebar} ${isOpen ? css.open : css.closed}`}>
         <Container className={css.sidebarContainer}>
           <button
-            aria-label="Menü schließen"
+            aria-label={t("closeMenu")}
             className={css.btnClose}
             onClick={() => setIsOpen(false)}
           >
@@ -61,21 +63,7 @@ export default function Sidebar() {
             className={css.nav}
             onLinkClick={() => setIsOpen(false)}
           />
-          <button
-            aria-label="Sprache wechseln"
-            className={css.btnLang}
-            onClick={() =>
-              toast.loading(
-                "Die Funktion zum Wechseln der Sprache befindet sich derzeit im Aufbau!",
-                {
-                  duration: 4000,
-                  className: `${css.toastIcon}`,
-                },
-              )
-            }
-          >
-            <IoGlobe />
-          </button>
+          <LangSwitcher className={css.btnLang} />
         </Container>
       </div>
     </div>

@@ -1,14 +1,16 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import Container from "../../ui/Container/Container";
 import css from "./Hero.module.css";
 import Section from "../../ui/Section/Section";
 import { useEffect, useRef } from "react";
 import { smoothScrollTo } from "@/lib/utils/smoothScroll";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
   const bottomDivRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("hero");
 
   useEffect(() => {
     const updateHeight = () => {
@@ -32,10 +34,8 @@ const Hero = () => {
   return (
     <Section id="hero" className={css.hero}>
       <Container className={css.container}>
-        <h1 className={css.heading}>No Limits</h1>
-        <p className={css.subHeading}>
-          kein Weg ist unmöglich mit einer Familie
-        </p>
+        <h1 className={css.heading}>{t("heading")}</h1>
+        <p className={css.subHeading}>{t("subtitle")}</p>
 
         <Link
           href="#trainings"
@@ -45,7 +45,7 @@ const Hero = () => {
           }}
           className={css.link}
         >
-          Unsere Trainings
+          {t("cta")}
         </Link>
       </Container>
       <div ref={bottomDivRef} className={css.bottomDiv}></div>

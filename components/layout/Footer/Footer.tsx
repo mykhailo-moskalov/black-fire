@@ -1,16 +1,18 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import Container from "../../ui/Container/Container";
 import Logo from "../../ui/Logo/Logo";
 import css from "./Footer.module.css";
 import { IoLocation, IoLogoInstagram, IoMail, IoOpen } from "react-icons/io5";
 import { useWidthStore } from "@/lib/store/widthStore";
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
   const isMobile = useWidthStore((state) => state.isMobile);
   const footerRef = useRef<HTMLElement>(null);
+  const t = useTranslations("footer");
 
   useEffect(() => {
     const updateHeight = () => {
@@ -86,10 +88,11 @@ const Footer = () => {
           </ul>
           <Link href="/legal" className={css.legalLink}>
             <IoOpen />
-            Impressum
+            {t("legal")}
           </Link>
           <p className={css.copyright}>
-            &copy; {new Date().getFullYear()} Verein BlackFire Cheer&Dance
+            &copy; {new Date().getFullYear()}
+            {t("copyright")}
           </p>
         </div>
       </Container>

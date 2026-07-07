@@ -24,6 +24,13 @@
   &:focus {
     background-color: var(--primary-color);
     transform: scale(1.15);
+
+    @media screen and (min-width: 768px) {
+      &:hover,
+      &:focus {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 .visible {

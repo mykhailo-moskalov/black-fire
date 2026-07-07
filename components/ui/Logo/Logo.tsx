@@ -1,10 +1,10 @@
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import css from "./Logo.module.css";
 import Image from "next/image";
 
 interface LogoProps {
   width: number;
-  height: number;
+  height?: number;
 }
 
 const Logo = ({ width, height }: LogoProps) => (
@@ -13,7 +13,8 @@ const Logo = ({ width, height }: LogoProps) => (
       alt="Black Fire Logo"
       src="/logo-transparent.png"
       width={width}
-      height={height}
+      height={height ?? width}
+      style={!height ? { height: "auto" } : undefined}
       className={css.img}
     />
   </Link>

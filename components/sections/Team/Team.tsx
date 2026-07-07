@@ -18,6 +18,7 @@ import { Captions, Zoom } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { useWidthStore } from "@/lib/store/widthStore";
+import { useTranslations } from "next-intl";
 
 const Team = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
@@ -32,13 +33,21 @@ const Team = () => {
   const imgHeight = isMobile || isTablet ? 502.5 : 702;
   const imgWidthHorizontal = imgHeight * 1.5;
 
+  const imgWidthThumbnail = isMobile || isTablet ? 60 : 84;
+  const imgHeightThumbnail = isMobile || isTablet ? 90 : 126;
+  const imgWidthHorizontalThumbnail = imgHeight * 1.5;
+
+  const t = useTranslations("team");
+  const ta = useTranslations("aria");
+  const ts = useTranslations("team.slides");
+
   return (
     <Section id="team" className={css.team}>
       <Container className={css.container}>
         <h2 className={css.heading}>
-          Unser
+          {t("heading1")}
           <br />
-          <span className="pad">Team</span>
+          <span className="pad">{t("heading2")}</span>
         </h2>
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -61,25 +70,25 @@ const Team = () => {
               <Image
                 width={slide.horizontal ? imgWidthHorizontal : imgWidth}
                 height={imgHeight}
-                alt={slide.description ?? ""}
+                alt={ts(slide.key)}
                 src={slide.thumbnail}
                 loading="lazy"
               />
-              {slide.description && (
-                <p className={css.slideDesc}>{slide.description}</p>
+              {ts(slide.key) && (
+                <p className={css.slideDesc}>{ts(slide.key)}</p>
               )}
             </SwiperSlide>
           ))}
           <div className={css.navBox}>
             <button
-              aria-label="Vorheriges Foto"
+              aria-label={ta("prevPhoto")}
               className={css.navBtn}
               onClick={() => swiperRef.current?.slidePrev()}
             >
               <IoChevronBack />
             </button>
             <button
-              aria-label="Nächstes Foto"
+              aria-label={ta("nextPhoto")}
               className={css.navBtn}
               onClick={() => swiperRef.current?.slideNext()}
             >
@@ -90,8 +99,7 @@ const Team = () => {
         <Swiper
           onSwiper={setThumbsSwiper}
           loop={true}
-          spaceBetween={10}
-          slidesPerView={4}
+          spaceBetween={12}
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
@@ -100,9 +108,13 @@ const Team = () => {
           {slides.map((slide) => (
             <SwiperSlide key={slide.mini} className={css.swiperSlide}>
               <Image
-                width={60}
-                height={slide.horizontal ? 40 : 90}
-                alt={slide.description ?? ""}
+                width={
+                  slide.horizontal
+                    ? imgWidthHorizontalThumbnail
+                    : imgWidthThumbnail
+                }
+                height={imgHeightThumbnail}
+                alt={ts(slide.key)}
                 src={slide.mini}
                 loading="lazy"
               />
@@ -114,7 +126,10 @@ const Team = () => {
       <Lightbox
         open={lightboxOpen}
         close={() => setLightboxOpen(false)}
-        slides={slides.map((s) => ({ src: s.src, description: s.description }))}
+        slides={slides.map((s) => ({
+          src: s.src,
+          description: ts(s.key) || undefined,
+        }))}
         index={lightboxIndex}
         plugins={[Captions, Zoom]}
         on={{

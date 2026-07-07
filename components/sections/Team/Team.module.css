@@ -41,6 +41,14 @@
   & :global(.swiper-slide-thumb-active) {
     opacity: 1;
   }
+
+  @media screen and (min-width: 1440px) {
+    height: 126px;
+
+    & .swiperSlide {
+      width: 84px !important;
+    }
+  }
 }
 
 .navBox {

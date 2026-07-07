@@ -9,17 +9,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/bundle";
 import { IoArrowForward } from "react-icons/io5";
+import { useTranslations } from "next-intl";
 
 const Trainings = () => {
   const setSwiper = useTrainingsStore((state) => state.setSwiper);
+  const t = useTranslations("trainings");
 
   return (
     <Section id="trainings" className={css.trainings}>
       <Container className={css.container}>
         <h2 className={css.heading}>
-          Unsere
+          {t("heading1")}
           <br />
-          <span className="pad">Trainings</span>
+          <span className="pad">{t("heading2")}</span>
         </h2>
         <Swiper
           onSwiper={setSwiper}
@@ -34,87 +36,88 @@ const Trainings = () => {
           className={css.swiper}
         >
           <SwiperSlide id="miniFlames" className={css.swiperSlide}>
-            <h3>Mini Flames</h3>
-            <h4>Trainings:</h4>
+            <h3>{t("teams.miniFlames.name")}</h3>
+            <h4>{t("trainingsH")}:</h4>
             <p>
-              Dienstag 16:30 bis 17:30 Uhr,
+              {t("teams.miniFlames.trainings.training1.time")}
               <br />
-              1100 Wien
+              {t("teams.miniFlames.trainings.training1.place")}
             </p>
-            <h4>Alter:</h4>
-            <p>3 Jahre bis 7 Jahre</p>
+            <h4>{t("ageH")}:</h4>
+            <p>{t("teams.miniFlames.age")}</p>
           </SwiperSlide>
           <SwiperSlide id="fairies" className={css.swiperSlide}>
-            <h3>Fairies</h3>
-            <h4>Trainings:</h4>
+            <h3>{t("teams.fairies.name")}</h3>
+            <h4>{t("trainingsH")}:</h4>
             <p>
-              Montag 16:30 bis 18 Uhr,
+              {t("teams.fairies.trainings.training1.time")}
               <br />
-              1100 Wien
+              {t("teams.fairies.trainings.training1.place")}
             </p>
             <p>
-              Freitag 16:00 bis 17 Uhr,
+              {t("teams.fairies.trainings.training2.time")}
               <br />
-              Brunn am Gebirge
+              {t("teams.fairies.trainings.training2.place")}
             </p>
-            <h4>Alter:</h4>
-            <p>6 Jahre bis 8 Jahre</p>
+            <h4>{t("ageH")}:</h4>
+            <p>{t("teams.fairies.age")}</p>
           </SwiperSlide>
           <SwiperSlide id="fireflies" className={css.swiperSlide}>
-            <h3>Fireflies</h3>
-            <h4>Trainings:</h4>
+            <h3>{t("teams.fireflies.name")}</h3>
+            <h4>{t("trainingsH")}:</h4>
             <p>
-              Dienstag 17:00 bis 18:30 Uhr,
+              {t("teams.fireflies.trainings.training1.time")}
               <br />
-              1100 Wien
+              {t("teams.fireflies.trainings.training1.place")}
             </p>
             <p>
-              Donnerstag 17:00 bis 19 Uhr,
+              {t("teams.fireflies.trainings.training2.time")}
               <br />
-              1100 Wien
+              {t("teams.fireflies.trainings.training2.place")}
             </p>
             <p>
-              Freitag 17:00 bis 19 Uhr,
+              {t("teams.fireflies.trainings.training3.time")}
               <br />
-              Brunn am Gebirge
+              {t("teams.fireflies.trainings.training3.place")}
             </p>
-            <h4>Alter:</h4>
-            <p>8 Jahre bis 12 Jahre</p>
+            <h4>{t("ageH")}:</h4>
+            <p>{t("teams.fireflies.age")}</p>
           </SwiperSlide>
           <SwiperSlide id="firebirds" className={css.swiperSlide}>
-            <h3>Firebirds</h3>
-            <h4>Trainings:</h4>
+            <h3>{t("teams.firebirds.name")}</h3>
+            <h4>{t("trainingsH")}:</h4>
             <p>
-              Montag 18:00 bis 19:30 Uhr,
+              {t("teams.firebirds.trainings.training1.time")}
               <br />
-              1100 Wien
+              {t("teams.firebirds.trainings.training1.place")}
             </p>
             <p>
-              Dienstag 18:00 bis 20:09 Uhr,
+              {t("teams.firebirds.trainings.training2.time")}
               <br />
-              1100 Wien
+              {t("teams.firebirds.trainings.training2.place")}
             </p>
             <p>
-              Freitag 19:00 bis 21 Uhr,
+              {t("teams.firebirds.trainings.training3.time")}
               <br />
-              Brunn am Gebirge
+              {t("teams.firebirds.trainings.training3.place")}
             </p>
-            <h4>Alter:</h4>
-            <p>12 Jahre bis 15 Jahre</p>
+            <h4>{t("ageH")}:</h4>
+            <p>{t("teams.firebirds.age")}</p>
           </SwiperSlide>
           <SwiperSlide id="forces" className={css.swiperSlide}>
-            <h3>Forces</h3>
-            <h4>Alter:</h4>
-            <p>14 Jahre bis 18 Jahre</p>
+            <h3>{t("teams.forces.name")}</h3>
+            <h4>{t("ageH")}:</h4>
+            <p>{t("teams.forces.age")}</p>
           </SwiperSlide>
           <SwiperSlide id="firestorm" className={css.swiperSlide}>
-            <h3>Firestorm</h3>
-            <h4>Alter:</h4>
-            <p>Ab 16 Jahre</p>
+            <h3>{t("teams.firestorm.name")}</h3>
+            <h4>{t("ageH")}:</h4>
+            <p>{t("teams.firestorm.age")}</p>
           </SwiperSlide>
         </Swiper>
         <p className={css.hint}>
-          Wische, um mehr zu sehen <IoArrowForward />
+          {t("hint")}
+          <IoArrowForward />
         </p>
       </Container>
     </Section>
